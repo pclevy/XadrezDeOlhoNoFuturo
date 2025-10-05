@@ -1,0 +1,7 @@
+Em determinada ocasião, foi testada a memória de Pillsbury para coisas alheias ao xadrez. Deram-lhe a seguinte lista de palavras: 
+
+Antiphlogistine, periosteum, takadiastase, plasmón, ambrosia, Threlkeld, streptococcus, staphylococcus, micrococcus, plasmodium, Mississippi, Freiheit, Philadclphia, Cincinatti, athletics, nowar, Etchenberg, American, Russian, philosophy, Piet Potgelter's Rost, Salamagundi, Oomisillecootsi, Bangmamvate, Schlechter's Nek, Manzinyama, theosophy, catechism, Madjesoomalops. 
+
+Pillsbury olhou a lista durante alguns instantes e logo repetiu todas as palavras na ordem dada. A seguir enunciou-as de trás para diante.
+ 
+(Experimente o leitor fazer o mesmo ... )

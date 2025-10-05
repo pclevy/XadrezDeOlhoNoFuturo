@@ -1,0 +1,209 @@
+/* '.logo-simbolo-pcd' alterado, 03/10/2025, 17:12 */
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0.5rem;
+  text-align: center;
+  margin-top: 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 0px;
+}
+body {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 0px;
+}
+
+.logo {
+  height: 15em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+  border-radius: 100px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+.video-class {
+  height: 15em;
+  padding: 0;
+  will-change: filter;
+  transition: filter 300ms;
+  border-radius: 1px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.video-class:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.video-class.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+.logo-olho {
+  height: 8em;
+  padding: 0.5em;
+  will-change: filter;
+  transition: filter 300ms;
+  border-radius: 10px 10px 10px 10px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.logo-olho:hover {
+  filter: drop-shadow(0 0 0.5em #646cffaa);
+}
+.logo-olho.react:hover {
+  filter: drop-shadow(0 0 0.5em #61dafbaa);
+}
+
+.logo-esfinge {
+  height: 6em;
+  padding: 0.5em;
+  will-change: filter;
+  transition: filter 300ms;
+  border-radius: 10px 10px 10px 10px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.logo-esfinge:hover {
+  filter: drop-shadow(0 0 0.5em #646cffaa);
+}
+.logo-esfinge.react:hover {
+  filter: drop-shadow(0 0 0.5em #61dafbaa);
+}
+.logo-simbolo-pcd {
+  height: 3em;
+  padding: 0.4em;
+  will-change: filter;
+  transition: filter 300ms;
+  border-radius: 10px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.logo-simbolo-pcd:hover {
+  filter: drop-shadow(0 0 0.5em #646cffaa);
+}
+.logo-simbolo-pcd.react:hover {
+  filter: drop-shadow(0 0 0.5em #61dafbaa);
+}
+
+.logo-icone {
+  height: 0.8em;
+  padding: 0em;
+  will-change: filter;
+  transition: filter 300ms;
+  border-radius: 10px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.logo-icone:hover {
+  filter: drop-shadow(0 0 0.5em #646cffaa);
+}
+.logo-icone.react:hover {
+  filter: drop-shadow(0 0 0.5em #61dafbaa);
+}
+
+.XadrezUERJ {
+  height: 10em;
+  padding: 0.5em;
+  will-change: filter;
+  transition: filter 300ms;
+  border-radius: 10px 10px 10px 10px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.XadrezUERJ:hover {
+  filter: drop-shadow(0 0 0.5em #646cffaa);
+}
+.XadrezUERJ.react:hover {
+  filter: drop-shadow(0 0 0.5em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.tooltip-anchor {
+  cursor: pointer;
+  position: relative;
+}
+
+.tooltip-anchor > span {
+  color: #0280c6;
+}
+
+.tooltip-anchor:hover {
+  color: tomato;
+}
+
+.tooltip {
+  display: none;
+  background-color: #444;
+  /* border: 1px solid #626262; */
+  color: #fff;
+  position: absolute;
+  bottom: 100%;
+  left: 1%;
+  /* width: 230px; */
+  min-width: 230px;
+  padding: 5px 5px;
+  font-size: 14px;
+  border-radius: 5px;
+  font-weight: normal;
+}
+
+.tooltip-anchor:hover .tooltip {
+  display: block;
+}
+
+.tooltip-content::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -10px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: #000 transparent transparent transparent;
+}
+
+.azul div:focus,
+.azul img:focus {
+  outline: 2px solid #0077cc;
+  background-color: #d0eaff;
+}
