@@ -88,7 +88,7 @@ function Home() {
         }}
       >
         <h3>Nossos Símbolos, nossa História</h3>
-        <h5>(em construção ... XadrezDeOlhoNoFuturo: 06/10/2025, 19:54)</h5>
+        <h5>(em construção ... XadrezDeOlhoNoFuturo: 08/10/2025, 19:11)</h5>
 
         {/* -- Inicia codigo Contador -- */}
         {/*
