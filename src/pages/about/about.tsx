@@ -88,7 +88,7 @@ function About() {
         <h4>(contato: 'projetoesfinge97@gmail.com' )</h4>
         <h5>(em construção ... 02/10/2025, 17:11)</h5>
 
-        {/* Bloco de anúncio do Google AdSense */}
+        {/* Início do Bloco de anúncio do Google AdSense */}
         <div style={{ marginTop: "10px" }}>
           <ins
             className="adsbygoogle"
@@ -99,6 +99,7 @@ function About() {
             data-full-width-responsive="true"
           ></ins>
         </div>
+        {/* Fim do Bloco de anúncio do Google AdSense */}
       </div>
 
       <div
