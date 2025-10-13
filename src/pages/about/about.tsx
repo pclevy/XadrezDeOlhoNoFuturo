@@ -100,10 +100,10 @@ function About() {
       >
         <h3>Sobre Nós</h3>
         <h4>(contato: 'projetoesfinge97@gmail.com')</h4>
-        <h5>(Construindo o Futuro ... 12/10/2025, 21:07)</h5>
+        <h5>(Construindo o Futuro ... 13/10/2025, 12:30)</h5>
 
         {/* Bloco do anúncio */}
-        <div style={{ marginTop: "10px", textAlign: "center" }}>
+        <div style={{ marginTop: "1px", textAlign: "center" }}>
           <ins
             className="adsbygoogle"
             style={{ display: "block" }}
@@ -119,30 +119,31 @@ function About() {
         className="azul"
         style={{
           position: "fixed",
-          top: `${navbarHeight + titHeight + 9}px`,
+          top: `${navbarHeight + titHeight + 10}px`,
           width: `${navbarWidth}px`,
           maxHeight: `${containerHeight - 5}px`,
           overflowY: "auto",
           backgroundColor: "#e0f0ff",
           border: "1px solid blue",
-          padding: "5px",
+          paddingTop: "3px",
           zIndex: 1,
         }}
       >
-        <div tabIndex={0}>
-          AI Levy, Paulo Cesar
+        <div tabIndex={0} style={{ paddingBottom: 12 }}>
+          AI Paulo Cesar Levy
+          <br />
+          Árbitro Internacional
           <br />
           Fide Id: 2133890
         </div>
-        <br />
-        <div tabIndex={0}>
-          Bibliotecária Ester A. Lima de Souza <br />
+
+        <div tabIndex={0} style={{ paddingBottom: 12 }}>
+          Ester A. Lima de Souza <br />
           Mestre em Ciência da Informação
         </div>
-        <br />
-        <div tabIndex={0}>Participante 2</div>
-        <div tabIndex={0}>Participante 3</div>
-        <div tabIndex={0}>Participante 4</div>
+
+        <div tabIndex={0}> ... </div>
+        <div tabIndex={0}> ... </div>
 
         <img
           src={Esfinge}
