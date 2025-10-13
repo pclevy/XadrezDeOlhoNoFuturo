@@ -42,7 +42,7 @@ const Navbar = ({ onHeightChange, onWidthChange }: NavbarProps) => {
         marginTop: 0,
         maxWidth: "94%",
         backgroundColor: "rgba(100,200,10,0.2)",
-        padding: "5px 6px",
+        padding: "3px 2px",
         display: "flex",
         justifyContent: "space-around",
         zIndex: 1000,

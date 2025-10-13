@@ -100,7 +100,7 @@ function About() {
       >
         <h3>Sobre Nós</h3>
         <h4>(contato: 'projetoesfinge97@gmail.com')</h4>
-        <h5>(Construindo o Futuro ... 13/10/2025, 12:30)</h5>
+        <h5>(Construindo o Futuro ... 13/10/2025, 14:43)</h5>
 
         {/* Bloco do anúncio */}
         <div style={{ marginTop: "1px", textAlign: "center" }}>
@@ -134,7 +134,14 @@ function About() {
           <br />
           Árbitro Internacional
           <br />
-          Fide Id: 2133890
+          <a
+            href="https://ratings.fide.com/profile/2133890"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: "blue", textDecoration: "underline" }}
+          >
+            Fide Id: 2133890
+          </a>
         </div>
 
         <div tabIndex={0} style={{ paddingBottom: 12 }}>
