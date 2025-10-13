@@ -8,7 +8,8 @@ import SimboloDeficienciaMobilidadeLogo from "../../assets/Simbolo-Deficiencia-M
 import cavaloPretoDirLogo from "../../assets/cavalo-preto-DirLogo.png";
 import peaoAvancado from "../../assets/peaoAvancado.png";
 import Esfinge from "../../assets/esfinge.png";
-import ImagemZoomHP from "../eventosHistoricos/ImageZoomHP.tsx";
+//import ImagemZoomHP from "../eventosHistoricos/ImageZoomHP.tsx";
+import ImagemZoomHP from "../eventosHistoricos/ImageZoomHP";
 
 import "./home.css";
 
@@ -88,7 +89,9 @@ function Home() {
         }}
       >
         <h3>Nossos Símbolos, nossa História</h3>
-        <h5>(em construção ... XadrezDeOlhoNoFuturo: 08/10/2025, 19:11)</h5>
+        <h5>
+          (Construindo o Futuro ... Xadrez de Olho no Futuro: 12/10/2025, 20:23)
+        </h5>
 
         {/* -- Inicia codigo Contador -- */}
         {/*
@@ -248,7 +251,7 @@ function Home() {
         </h4>
 
         <h5>
-          {/* (em construção ... 29/08/2025, 19:48) */}
+          {/* (em construção ... 12/10/2025, 20:40) */}
           {/*
               <span style={{ cursor: "pointer" }}>
                 {" "}

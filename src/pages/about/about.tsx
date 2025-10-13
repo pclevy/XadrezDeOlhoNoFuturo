@@ -10,7 +10,7 @@ function About() {
 
   const titRef = useRef<HTMLDivElement>(null);
 
-  // Observa dinamicamente a altura do Tit
+  // Observa dinamicamente a altura do título
   useEffect(() => {
     const updateTitHeight = () => {
       if (titRef.current) {
@@ -21,10 +21,7 @@ function About() {
 
     updateTitHeight();
 
-    const observer = new ResizeObserver(() => {
-      updateTitHeight();
-    });
-
+    const observer = new ResizeObserver(updateTitHeight);
     if (titRef.current) {
       observer.observe(titRef.current);
     }
@@ -40,9 +37,9 @@ function About() {
   // Atualiza altura do container azul
   useEffect(() => {
     const updateHeight = () => {
-      const alturaDisponivel =
+      const availableHeight =
         window.innerHeight - navbarHeight - titHeight - 10;
-      setContainerHeight(alturaDisponivel);
+      setContainerHeight(availableHeight);
     };
 
     updateHeight();
@@ -50,18 +47,38 @@ function About() {
     return () => window.removeEventListener("resize", updateHeight);
   }, [navbarHeight, titHeight]);
 
-  // Ativa o bloco de anúncio do AdSense
-  {
-    /*
+  // Carrega e ativa o anúncio do Google AdSense
   useEffect(() => {
-    try {
-      (window.adsbygoogle = window.adsbygoogle || []).push({});
-    } catch (e) {
-      console.error("Erro ao carregar anúncio:", e);
+    const scriptId = "adsbygoogle-script";
+
+    if (!document.getElementById(scriptId)) {
+      const script = document.createElement("script");
+      script.id = scriptId;
+      script.src =
+        "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";
+      script.async = true;
+      script.setAttribute("data-ad-client", "ca-pub-7174891341008290");
+      script.crossOrigin = "anonymous";
+
+      script.onload = () => {
+        try {
+          window.adsbygoogle = window.adsbygoogle || [];
+          window.adsbygoogle.push({});
+        } catch (e) {
+          console.error("Erro ao carregar anúncio (onload):", e);
+        }
+      };
+
+      document.head.appendChild(script);
+    } else {
+      try {
+        window.adsbygoogle = window.adsbygoogle || [];
+        window.adsbygoogle.push({});
+      } catch (e) {
+        console.error("Erro ao carregar anúncio:", e);
+      }
     }
   }, []);
-*/
-  }
 
   return (
     <div style={{ marginTop: 0, padding: "0px 5px", justifyItems: "center" }}>
@@ -76,30 +93,26 @@ function About() {
           top: `${navbarHeight + 9}px`,
           width: `${navbarWidth}px`,
           border: "1px solid black",
-          paddingTop: "0px",
-          paddingBottom: "1px",
-          paddingLeft: "1px",
-          paddingRight: "1px",
           backgroundColor: "#fff",
           zIndex: 0,
+          padding: "1px",
         }}
       >
         <h3>Sobre Nós</h3>
-        <h4>(contato: 'projetoesfinge97@gmail.com' )</h4>
-        <h5>(em construção ... 02/10/2025, 17:11)</h5>
+        <h4>(contato: 'projetoesfinge97@gmail.com')</h4>
+        <h5>(Construindo o Futuro ... 12/10/2025, 21:07)</h5>
 
-        {/* Início do Bloco de anúncio do Google AdSense */}
-        <div style={{ marginTop: "10px" }}>
+        {/* Bloco do anúncio */}
+        <div style={{ marginTop: "10px", textAlign: "center" }}>
           <ins
             className="adsbygoogle"
             style={{ display: "block" }}
             data-ad-client="ca-pub-7174891341008290"
-            data-ad-slot="1234567890"
+            data-ad-slot="1234567890" // Substitua com seu slot real!
             data-ad-format="auto"
             data-full-width-responsive="true"
           ></ins>
         </div>
-        {/* Fim do Bloco de anúncio do Google AdSense */}
       </div>
 
       <div
@@ -108,29 +121,34 @@ function About() {
           position: "fixed",
           top: `${navbarHeight + titHeight + 9}px`,
           width: `${navbarWidth}px`,
-          overflowY: "auto",
           maxHeight: `${containerHeight - 5}px`,
-          border: "1px solid blue",
+          overflowY: "auto",
           backgroundColor: "#e0f0ff",
-          marginTop: 1,
-          paddingTop: "0px",
-          paddingBottom: "1px",
-          paddingLeft: "1px",
-          paddingRight: "1px",
+          border: "1px solid blue",
+          padding: "5px",
           zIndex: 1,
         }}
       >
-        <div tabIndex={0}>Coordenador</div>
-        <div tabIndex={0}>Participante 1</div>
+        <div tabIndex={0}>
+          AI Levy, Paulo Cesar
+          <br />
+          Fide Id: 2133890
+        </div>
+        <br />
+        <div tabIndex={0}>
+          Bibliotecária Ester A. Lima de Souza <br />
+          Mestre em Ciência da Informação
+        </div>
+        <br />
         <div tabIndex={0}>Participante 2</div>
         <div tabIndex={0}>Participante 3</div>
-        <div tabIndex={0}>Participante 4 </div>
+        <div tabIndex={0}>Participante 4</div>
 
         <img
           src={Esfinge}
           className="logo-olho"
-          alt="Outra Descrição Imagem de uma Esfinge, símbolo do 'site'"
-          title="Imagem de uma Esfinge, símbolo do 'site'"
+          alt="Imagem de uma Esfinge, símbolo do site"
+          title="Imagem de uma Esfinge, símbolo do site"
           tabIndex={0}
           style={{ marginTop: "10px", maxWidth: "200px", outline: "none" }}
         />
