@@ -3,6 +3,8 @@ import Navbar from "../../components/Navbar";
 import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
 
+import FundoArte from "../../assets/chesgame.jpg";
+
 //import { Link } from "react-router-dom"; //*** Receber Arquivo ***
 
 import { eventos, type Evento } from "../../data/eventosFuturos";
@@ -110,6 +112,10 @@ function EventosFuturos() {
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
+
+          backgroundImage: `url(${FundoArte})`, // 👈 aqui
+          backgroundRepeat: "repeat", // evita repetição
+          backgroundPosition: "center", // centraliza
         }}
       >
         {/* Conteúdo rolável */}

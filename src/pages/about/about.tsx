@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import Navbar from "../../components/Navbar";
 import Esfinge from "../../assets/esfinge.png";
+import FundoArte from "../../assets/chesgame.jpg";
 
 function About() {
   const [navbarHeight, setNavbarHeight] = useState(0);
@@ -100,7 +101,7 @@ function About() {
       >
         <h3>Sobre Nós</h3>
         <h4>(contato: 'projetoesfinge97@gmail.com')</h4>
-        <h5>(Construindo o Futuro ... 13/10/2025, 14:43)</h5>
+        <h5>(Construindo o Futuro ... 16/10/2025, 15:11)</h5>
 
         {/* Bloco do anúncio */}
         <div style={{ marginTop: "1px", textAlign: "center" }}>
@@ -108,7 +109,8 @@ function About() {
             className="adsbygoogle"
             style={{ display: "block" }}
             data-ad-client="ca-pub-7174891341008290"
-            data-ad-slot="1234567890" // Substitua com seu slot real!
+            //data-ad-slot="1234567890" // Substitua com seu slot real!
+            data-ad-slot="9948140848" // Substitua com seu slot real!
             data-ad-format="auto"
             data-full-width-responsive="true"
           ></ins>
@@ -126,13 +128,22 @@ function About() {
           backgroundColor: "#e0f0ff",
           border: "1px solid blue",
           paddingTop: "3px",
+
+          backgroundImage: `url(${FundoArte})`, // 👈 aqui
+          backgroundRepeat: "repeat", // evita repetição
+          backgroundPosition: "center", // centraliza
+
           zIndex: 1,
         }}
       >
-        <div tabIndex={0} style={{ paddingBottom: 12 }}>
-          AI Paulo Cesar Levy
+        <div tabIndex={0} style={{ padding: "12px 0px 12px 0px" }}>
+          <span style={{ fontSize: "20px" }}>
+            <b>AI Paulo Cesar Levy</b>
+          </span>
           <br />
-          Árbitro Internacional
+          <span style={{ fontSize: "16px" }}>
+            <b>Árbitro Internacional</b>
+          </span>
           <br />
           <a
             href="https://ratings.fide.com/profile/2133890"
@@ -140,13 +151,31 @@ function About() {
             rel="noopener noreferrer"
             style={{ color: "blue", textDecoration: "underline" }}
           >
-            Fide Id: 2133890
+            <span style={{ fontSize: "16px" }}>
+              <b>Fide ID: 2133890</b>
+            </span>
           </a>
         </div>
 
         <div tabIndex={0} style={{ paddingBottom: 12 }}>
-          Ester A. Lima de Souza <br />
-          Mestre em Ciência da Informação
+          <span style={{ fontSize: "20px" }}>
+            <b>Ester A. Lima de Souza</b>
+          </span>
+          <br />
+          <span style={{ fontSize: "16px" }}>
+            <b>Mestre em Ciência da Informação</b>
+          </span>
+          <br />
+          <a
+            href="http://lattes.cnpq.br/6675953180309183"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: "blue", textDecoration: "underline" }}
+          >
+            <span style={{ fontSize: "16px" }}>
+              <b>Lattes ID: 6675953180309183</b>
+            </span>
+          </a>
         </div>
 
         <div tabIndex={0}> ... </div>

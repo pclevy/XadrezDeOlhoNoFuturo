@@ -4,6 +4,8 @@ import Navbar from "../../components/Navbar";
 import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
 
+import FundoArte from "../../assets/chesgame.jpg";
+
 import MeckingLevy from "../../assets/Mecking_Levy.jpg";
 import LeandroQueiros from "../../assets/LeandroQueiros.jpg";
 import AntonioFrancisco from "../../assets/AntonioFrancisco.jpg";
@@ -162,6 +164,11 @@ function Atualidades() {
           backgroundColor: "#e9f9ff",
           marginTop: 1,
           padding: "8px",
+
+          backgroundImage: `url(${FundoArte})`, // 👈 aqui
+          backgroundRepeat: "repeat", // evita repetição
+          backgroundPosition: "center", // centraliza
+
           zIndex: 998,
         }}
       >

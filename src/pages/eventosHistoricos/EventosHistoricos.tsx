@@ -3,6 +3,8 @@ import Navbar from "../../components/Navbar";
 import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
 
+import FundoArte from "../../assets/chesgame.jpg";
+
 import { eventos, type Evento } from "../../data/eventosHistoricos";
 
 function EventosHistoricos() {
@@ -110,6 +112,11 @@ function EventosHistoricos() {
           paddingBottom: "1px",
           paddingLeft: "1px",
           paddingRight: "1px",
+
+          backgroundImage: `url(${FundoArte})`, // 👈 aqui
+          backgroundRepeat: "repeat", // evita repetição
+          backgroundPosition: "center", // centraliza
+
           zIndex: 998,
         }}
       >

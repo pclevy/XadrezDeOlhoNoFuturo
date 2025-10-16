@@ -11,6 +11,8 @@ import Esfinge from "../../assets/esfinge.png";
 //import ImagemZoomHP from "../eventosHistoricos/ImageZoomHP.tsx";
 import ImagemZoomHP from "../eventosHistoricos/ImageZoomHP";
 
+import FundoArte from "../../assets/chesgame.jpg";
+
 import "./home.css";
 
 import { useRef, useState, useEffect } from "react";
@@ -126,6 +128,11 @@ function Home() {
           paddingBottom: "1px",
           paddingLeft: "1px",
           paddingRight: "1px",
+
+          backgroundImage: `url(${FundoArte})`, // 👈 aqui
+          backgroundRepeat: "repeat", // evita repetição
+          backgroundPosition: "center", // centraliza
+
           zIndex: 998,
         }}
       >

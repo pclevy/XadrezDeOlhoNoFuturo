@@ -4,6 +4,8 @@ import Navbar from "../../components/Navbar";
 import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
 
+import FundoArte from "../../assets/chesgame.jpg";
+
 import PlanilhaSimultanea1997 from "../../assets/SimultaneaDarcy1997_MarceloSBacha.jpg";
 import Interclubes2R1999_MarceloSBacha from "../../assets/Interclubes2R1999_MarceloSBacha.jpg";
 import Interclubes3R1999_MarceloSBacha from "../../assets/Interclubes3R1999_MarceloSBacha.jpg";
@@ -142,6 +144,11 @@ function Reliquias() {
           paddingBottom: "5px",
           paddingLeft: "1px",
           paddingRight: "1px",
+
+          backgroundImage: `url(${FundoArte})`, // 👈 aqui
+          backgroundRepeat: "repeat", // evita repetição
+          backgroundPosition: "center", // centraliza
+
           zIndex: 998,
 
           display: "flex", // coloca os itens em linha
