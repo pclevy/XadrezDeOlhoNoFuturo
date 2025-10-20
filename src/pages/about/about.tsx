@@ -101,7 +101,7 @@ function About() {
       >
         <h3>Sobre Nós</h3>
         <h4>(contato: 'projetoesfinge97@gmail.com')</h4>
-        <h5>(Construindo o Futuro ... 20/10/2025, 17:39)</h5>
+        <h5>(Construindo o Futuro ... 20/10/2025, 19:11)</h5>
 
         {/* Bloco do anúncio */}
         <div style={{ marginTop: "1px", textAlign: "center" }}>
@@ -183,9 +183,7 @@ function About() {
 
         <img
           src={Esfinge}
-          //className="logo-olho" logo-simbolo-pcd
-          className="logo-olho"
-          logo-simbolo-pcd
+          className="logo-simbolo-pcd"
           alt="Imagem de uma Esfinge, símbolo do site"
           title="Imagem de uma Esfinge, símbolo do site"
           tabIndex={0}
