@@ -101,20 +101,7 @@ function About() {
       >
         <h3>Sobre Nós</h3>
         <h4>(contato: 'projetoesfinge97@gmail.com')</h4>
-        <h5>(Construindo o Futuro ... 20/10/2025, 19:11)</h5>
-
-        {/* Bloco do anúncio */}
-        <div style={{ marginTop: "1px", textAlign: "center" }}>
-          <ins
-            className="adsbygoogle"
-            style={{ display: "block" }}
-            data-ad-client="ca-pub-7174891341008290"
-            //data-ad-slot="1234567890" // Substitua com seu slot real!
-            data-ad-slot="9948140848" // Substitua com seu slot real!
-            data-ad-format="auto"
-            data-full-width-responsive="true"
-          ></ins>
-        </div>
+        <h5>(Construindo o Futuro ... 20/10/2025, 19:17)</h5>
       </div>
 
       <div
@@ -189,6 +176,17 @@ function About() {
           tabIndex={0}
           style={{ marginTop: "10px", maxWidth: "200px", outline: "none" }}
         />
+        {/* Bloco do anúncio */}
+        <div style={{ marginTop: "1px", textAlign: "center" }}>
+          <ins
+            className="adsbygoogle"
+            style={{ display: "block" }}
+            data-ad-client="ca-pub-7174891341008290"
+            data-ad-slot="9948140848" // Substitua com seu slot real!
+            data-ad-format="auto"
+            data-full-width-responsive="true"
+          ></ins>
+        </div>
       </div>
     </div>
   );
