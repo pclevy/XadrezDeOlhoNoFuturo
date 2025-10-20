@@ -67,6 +67,39 @@ function Home() {
 
   console.log("Navbar:", navbarHeight, "Tit:", titHeight);
 
+  // Carrega e ativa o anúncio do Google AdSense
+  useEffect(() => {
+    const scriptId = "adsbygoogle-script";
+
+    if (!document.getElementById(scriptId)) {
+      const script = document.createElement("script");
+      script.id = scriptId;
+      script.src =
+        "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";
+      script.async = true;
+      script.setAttribute("data-ad-client", "ca-pub-7174891341008290");
+      script.crossOrigin = "anonymous";
+
+      script.onload = () => {
+        try {
+          window.adsbygoogle = window.adsbygoogle || [];
+          window.adsbygoogle.push({});
+        } catch (e) {
+          console.error("Erro ao carregar anúncio (onload):", e);
+        }
+      };
+
+      document.head.appendChild(script);
+    } else {
+      try {
+        window.adsbygoogle = window.adsbygoogle || [];
+        window.adsbygoogle.push({});
+      } catch (e) {
+        console.error("Erro ao carregar anúncio:", e);
+      }
+    }
+  }, []);
+
   return (
     <div style={{ marginTop: 0, padding: "0px 5px", justifyItems: "center" }}>
       {/* Navbar fixa no topo */}
@@ -92,7 +125,7 @@ function Home() {
       >
         <h3>Nossos Símbolos, nossa História</h3>
         <h5>
-          (Construindo o Futuro ... Xadrez de Olho no Futuro: 13/10/2025, 01:37)
+          (Construindo o Futuro ... Xadrez de Olho no Futuro: 20/10/2025, 19:51)
         </h5>
 
         {/* -- Inicia codigo Contador -- */}
@@ -257,17 +290,17 @@ function Home() {
           </div>
         </h4>
 
-        <h5>
-          {/* (em construção ... 12/10/2025, 20:40) */}
-          {/*
-              <span style={{ cursor: "pointer" }}>
-                {" "}
-                <a onClick={() => navigation("/about")}>Sobre</a>
-              </span>
-              */}
-        </h5>
-
-        <p className="read-the-docs"></p>
+        {/* Bloco do anúncio */}
+        <div style={{ marginTop: "1px", textAlign: "center" }}>
+          <ins
+            className="adsbygoogle"
+            style={{ display: "block" }}
+            data-ad-client="ca-pub-7174891341008290"
+            data-ad-slot="9948140848" // Substitua com seu slot real!
+            data-ad-format="auto"
+            data-full-width-responsive="true"
+          ></ins>
+        </div>
       </div>
     </div>
   );

@@ -101,7 +101,7 @@ function About() {
       >
         <h3>Sobre Nós</h3>
         <h4>(contato: 'projetoesfinge97@gmail.com')</h4>
-        <h5>(Construindo o Futuro ... 20/10/2025, 19:17)</h5>
+        <h5>(Construindo o Futuro ... 20/10/2025, 19:24)</h5>
       </div>
 
       <div
@@ -165,8 +165,10 @@ function About() {
           </a>
         </div>
 
-        <div tabIndex={0}> ... </div>
-        <div tabIndex={0}> ... </div>
+        {/*
+          <div tabIndex={0}> ... </div>
+          <div tabIndex={0}> ... </div>
+        */}
 
         <img
           src={Esfinge}
