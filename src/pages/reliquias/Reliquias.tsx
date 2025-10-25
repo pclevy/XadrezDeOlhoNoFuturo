@@ -21,6 +21,18 @@ function Reliquias() {
 
   const titRef = useRef<HTMLDivElement>(null);
 
+  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 768);
+
+  // Detecta mudanças no tamanho da tela
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth <= 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   // Observa dinamicamente a altura do Tit
   useEffect(() => {
     const updateTitHeight = () => {
@@ -114,7 +126,9 @@ function Reliquias() {
         style={{
           position: "fixed",
           top: `${navbarHeight + 9}px`,
-          width: `${navbarWidth}px`,
+          width: isSmallScreen ? "95%" : `${navbarWidth}px`,
+          left: isSmallScreen ? "50%" : "auto",
+          transform: isSmallScreen ? "translateX(-50%)" : "none",
           border: "1px solid black",
           paddingTop: "0px",
           paddingBottom: "1px",
@@ -125,7 +139,7 @@ function Reliquias() {
         }}
       >
         <h3>Documentos Históricos do XadrezUERJ</h3>
-        <h5>(em construção ... 21/09/2025, 14:37)</h5>
+        <h5>(em construção ... 23/10/2025, 21:56)</h5>
       </div>
 
       {/* Azul logo abaixo do Tit */}
@@ -134,12 +148,17 @@ function Reliquias() {
         style={{
           position: "fixed",
           top: `${navbarHeight + titHeight + 9}px`,
-          minWidth: `${navbarWidth}px`,
+          width: isSmallScreen ? "95%" : `${navbarWidth}px`,
+          left: isSmallScreen ? "50%" : "auto",
+          transform: isSmallScreen ? "translateX(-50%)" : "none",
           overflowY: "auto",
+          //minWidth: `${navbarWidth}px`,
           maxHeight: `${containerHeight - 9}px`,
           border: "1px solid blue",
           backgroundColor: "#e9f9ff",
+          //padding: "10px",
           marginTop: 1,
+
           paddingTop: "2px",
           paddingBottom: "5px",
           paddingLeft: "1px",

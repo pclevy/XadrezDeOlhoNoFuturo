@@ -11,6 +11,18 @@ function About() {
 
   const titRef = useRef<HTMLDivElement>(null);
 
+  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 768);
+
+  // Detecta mudanças no tamanho da tela
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth <= 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   // Observa dinamicamente a altura do título
   useEffect(() => {
     const updateTitHeight = () => {
@@ -88,39 +100,52 @@ function About() {
       <div
         ref={titRef}
         className="Tit"
-        tabIndex={0}
+        tabIndex={0} // agora entra no fluxo do Tab
         style={{
           position: "fixed",
           top: `${navbarHeight + 9}px`,
-          width: `${navbarWidth}px`,
+          width: isSmallScreen ? "95%" : `${navbarWidth}px`,
+          left: isSmallScreen ? "50%" : "auto",
+          transform: isSmallScreen ? "translateX(-50%)" : "none",
           border: "1px solid black",
+          paddingTop: "0px",
+          paddingBottom: "1px",
+          paddingLeft: "1px",
+          paddingRight: "1px",
           backgroundColor: "#fff",
-          zIndex: 0,
-          padding: "1px",
+          zIndex: 999,
         }}
       >
         <h3>Sobre Nós</h3>
         <h4>(contato: 'projetoesfinge97@gmail.com')</h4>
-        <h5>(Construindo o Futuro ... 20/10/2025, 19:24)</h5>
+        <h5>(Construindo o Futuro ... 23/10/2025, 21:53)</h5>
       </div>
 
       <div
         className="azul"
+        //tabIndex={0} // agora entra no fluxo do Tab
         style={{
           position: "fixed",
-          top: `${navbarHeight + titHeight + 10}px`,
-          width: `${navbarWidth}px`,
-          maxHeight: `${containerHeight - 5}px`,
+          top: `${navbarHeight + titHeight + 9}px`,
+          width: isSmallScreen ? "95%" : `${navbarWidth}px`,
+          left: isSmallScreen ? "50%" : "auto",
+          transform: isSmallScreen ? "translateX(-50%)" : "none",
           overflowY: "auto",
-          backgroundColor: "#e0f0ff",
+          maxHeight: `${containerHeight - 5}px`,
           border: "1px solid blue",
-          paddingTop: "3px",
+          backgroundColor: "#e9f9ff",
+          //padding: "10px",
+          marginTop: 1,
+          paddingTop: "0px",
+          paddingBottom: "1px",
+          paddingLeft: "1px",
+          paddingRight: "1px",
 
           backgroundImage: `url(${FundoArte})`, // 👈 aqui
           backgroundRepeat: "repeat", // evita repetição
           backgroundPosition: "center", // centraliza
 
-          zIndex: 1,
+          zIndex: 998,
         }}
       >
         <div tabIndex={0} style={{ padding: "12px 0px 12px 0px" }}>

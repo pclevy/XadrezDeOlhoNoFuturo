@@ -1,3 +1,6 @@
+/* alterado em 23/10/2025, 21:52 */
+/* Adicionado menu hambúrguer em 23/10/2025 */
+
 import { useRef, useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./Navbar.css";
@@ -18,7 +21,12 @@ const Navbar = ({ onHeightChange, onWidthChange }: NavbarProps) => {
       entries.forEach((entry: ResizeObserverEntry) => {
         const { height, width } = entry.contentRect;
         onHeightChange?.(height);
-        onWidthChange?.(width);
+
+        // Só envia a largura em telas grandes
+        if (window.innerWidth > 768) {
+          onWidthChange?.(width);
+        }
+
         console.log("Navbar → altura:", height, "largura:", width);
       });
     });
@@ -45,7 +53,7 @@ const Navbar = ({ onHeightChange, onWidthChange }: NavbarProps) => {
           display: "flex",
           justifyContent: "space-around",
           zIndex: 1000,
-          alignItems: "center", // para alinhar o botão hamburger e links
+          alignItems: "center",
         }}
       >
         {/* Botão hamburger só aparece em telas pequenas */}
@@ -55,29 +63,13 @@ const Navbar = ({ onHeightChange, onWidthChange }: NavbarProps) => {
           aria-expanded={menuOpen}
           onClick={() => setMenuOpen(!menuOpen)}
           type="button"
-          style={{
-            display: "none", // padrão escondido - CSS media query vai mostrar
-            background: "transparent",
-            border: "none",
-            fontSize: "24px",
-            cursor: "pointer",
-            marginRight: "8px",
-            color: "black", // cor do ícone (mesma do texto padrão)
-          }}
         >
-          ☰
+          ☰ &nbsp; &nbsp; Xadrez de Olho no Futuro
         </button>
 
-        {/* Menu normal */}
-        <div
-          className="menu-links"
-          style={{
-            display: "flex",
-            gap: "10px",
-            flexWrap: "wrap",
-          }}
-        >
-          <div>
+        {/* Menu desktop - esconde em telas pequenas */}
+        <div className="menu-links-desktop">
+          <div className="menu-group">
             <NavLink
               to="/"
               className={({ isActive }) => (isActive ? "active" : "")}
@@ -98,7 +90,7 @@ const Navbar = ({ onHeightChange, onWidthChange }: NavbarProps) => {
             </NavLink>{" "}
             &nbsp;{" "}
           </div>
-          <div>
+          <div className="menu-group">
             <NavLink
               to="/eventosHistoricos"
               className={({ isActive }) => (isActive ? "active" : "")}
@@ -118,7 +110,7 @@ const Navbar = ({ onHeightChange, onWidthChange }: NavbarProps) => {
             </NavLink>{" "}
             &nbsp;{" "}
           </div>
-          <div>
+          <div className="menu-group">
             <NavLink
               to="/eventosFuturos"
               className={({ isActive }) => (isActive ? "active" : "")}
@@ -151,82 +143,74 @@ const Navbar = ({ onHeightChange, onWidthChange }: NavbarProps) => {
 
       {/* Menu hamburguer para telas pequenas, aparece só se menuOpen === true */}
       {menuOpen && (
-        <nav
-          aria-label="Menu móvel"
-          style={{
-            position: "fixed",
-            top: "44px", // logo abaixo da navbar
-            left: "50%",
-            transform: "translateX(-50%)",
-            backgroundColor: "rgba(100,200,10,0.2)",
-            padding: "10px",
-            borderRadius: "8px",
-            boxShadow: "0 1px 3px rgba(0, 0, 0, 0.2)",
-            maxWidth: "94%",
-            zIndex: 1000,
-            display: "flex",
-            flexDirection: "column",
-            gap: "8px",
-          }}
-        >
-          <NavLink
-            to="/"
-            className={({ isActive }) => (isActive ? "active" : "")}
-            title="Menu: Aba 'Início'"
-            aria-label="Menu: Aba 'Início'"
+        <>
+          {/* Overlay para fechar ao clicar fora */}
+          <div
+            className="menu-overlay"
             onClick={() => setMenuOpen(false)}
-          >
-            Início
-          </NavLink>
-          <NavLink
-            to="/atualidades"
-            className={({ isActive }) => (isActive ? "active" : "")}
-            title="Aba 'Atualidades'"
-            onClick={() => setMenuOpen(false)}
-          >
-            Atualidades
-          </NavLink>
-          <NavLink
-            to="/eventosHistoricos"
-            className={({ isActive }) => (isActive ? "active" : "")}
-            title="Aba 'Eventos Históricos'"
-            onClick={() => setMenuOpen(false)}
-          >
-            Históricos
-          </NavLink>
-          <NavLink
-            to="/ReliquiasXadrezUERJ"
-            className={({ isActive }) => (isActive ? "active" : "")}
-            title="Aba 'Eventos UERJ'"
-            onClick={() => setMenuOpen(false)}
-          >
-            EventosUERJ
-          </NavLink>
-          <NavLink
-            to="/eventosFuturos"
-            className={({ isActive }) => (isActive ? "active" : "")}
-            title="Aba 'Próximos Eventos'"
-            onClick={() => setMenuOpen(false)}
-          >
-            Próximos Eventos
-          </NavLink>
-          <NavLink
-            to="/Reliquias"
-            className={({ isActive }) => (isActive ? "active" : "")}
-            title="Aba 'Relíquias'"
-            onClick={() => setMenuOpen(false)}
-          >
-            Relíquias
-          </NavLink>
-          <NavLink
-            to="/about"
-            className={({ isActive }) => (isActive ? "active" : "")}
-            title="Aba 'Sobre Nós'"
-            onClick={() => setMenuOpen(false)}
-          >
-            Sobre Nós
-          </NavLink>
-        </nav>
+            aria-hidden="true"
+          />
+
+          <nav aria-label="Menu móvel" className="menu-mobile">
+            <NavLink
+              to="/"
+              className={({ isActive }) => (isActive ? "active" : "")}
+              title="Menu: Aba 'Início'"
+              aria-label="Menu: Aba 'Início'"
+              onClick={() => setMenuOpen(false)}
+            >
+              Início
+            </NavLink>
+            <NavLink
+              to="/atualidades"
+              className={({ isActive }) => (isActive ? "active" : "")}
+              title="Aba 'Atualidades'"
+              onClick={() => setMenuOpen(false)}
+            >
+              Atualidades
+            </NavLink>
+            <NavLink
+              to="/eventosHistoricos"
+              className={({ isActive }) => (isActive ? "active" : "")}
+              title="Aba 'Eventos Históricos'"
+              onClick={() => setMenuOpen(false)}
+            >
+              Históricos
+            </NavLink>
+            <NavLink
+              to="/ReliquiasXadrezUERJ"
+              className={({ isActive }) => (isActive ? "active" : "")}
+              title="Aba 'Eventos UERJ'"
+              onClick={() => setMenuOpen(false)}
+            >
+              EventosUERJ
+            </NavLink>
+            <NavLink
+              to="/eventosFuturos"
+              className={({ isActive }) => (isActive ? "active" : "")}
+              title="Aba 'Próximos Eventos'"
+              onClick={() => setMenuOpen(false)}
+            >
+              Próximos Eventos
+            </NavLink>
+            <NavLink
+              to="/Reliquias"
+              className={({ isActive }) => (isActive ? "active" : "")}
+              title="Aba 'Relíquias'"
+              onClick={() => setMenuOpen(false)}
+            >
+              Relíquias
+            </NavLink>
+            <NavLink
+              to="/about"
+              className={({ isActive }) => (isActive ? "active" : "")}
+              title="Aba 'Sobre Nós'"
+              onClick={() => setMenuOpen(false)}
+            >
+              Sobre Nós
+            </NavLink>
+          </nav>
+        </>
       )}
     </>
   );

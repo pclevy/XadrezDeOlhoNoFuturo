@@ -71,6 +71,18 @@ function Atualidades() {
 
   const titRef = useRef<HTMLDivElement>(null);
 
+  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 768);
+
+  // Detecta mudanças no tamanho da tela
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth <= 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   // estilos reutilizáveis
   const FIGURE_STYLE: React.CSSProperties = {
     textAlign: "center",
@@ -136,34 +148,45 @@ function Atualidades() {
       <div
         ref={titRef}
         className="Tit"
-        tabIndex={0}
+        tabIndex={0} // agora entra no fluxo do Tab
         style={{
           position: "fixed",
           top: `${navbarHeight + 9}px`,
-          width: `${navbarWidth}px`,
+          width: isSmallScreen ? "95%" : `${navbarWidth}px`,
+          left: isSmallScreen ? "50%" : "auto",
+          transform: isSmallScreen ? "translateX(-50%)" : "none",
           border: "1px solid black",
+          paddingTop: "0px",
+          paddingBottom: "1px",
+          paddingLeft: "1px",
+          paddingRight: "1px",
           backgroundColor: "#fff",
           zIndex: 999,
-          padding: "2px",
         }}
       >
         <h3 tabIndex={0}>Atualidades</h3>
-        <h5 tabIndex={0}>(em construção ... 24/09/2025, 19:45)</h5>
+        <h5 tabIndex={0}>(em construção ... 23/10/2025, 21:54)</h5>
       </div>
 
       <div
         className="azul"
-        tabIndex={0}
+        //tabIndex={0} // agora entra no fluxo do Tab
         style={{
           position: "fixed",
           top: `${navbarHeight + titHeight + 9}px`,
-          minWidth: `${navbarWidth}px`,
+          width: isSmallScreen ? "95%" : `${navbarWidth}px`,
+          left: isSmallScreen ? "50%" : "auto",
+          transform: isSmallScreen ? "translateX(-50%)" : "none",
           overflowY: "auto",
-          maxHeight: `${containerHeight - 22}px`,
+          maxHeight: `${containerHeight - 5}px`,
           border: "1px solid blue",
           backgroundColor: "#e9f9ff",
+          //padding: "10px",
           marginTop: 1,
-          padding: "8px",
+          paddingTop: "0px",
+          paddingBottom: "1px",
+          paddingLeft: "1px",
+          paddingRight: "1px",
 
           backgroundImage: `url(${FundoArte})`, // 👈 aqui
           backgroundRepeat: "repeat", // evita repetição

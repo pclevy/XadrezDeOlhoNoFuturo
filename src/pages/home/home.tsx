@@ -25,6 +25,17 @@ function Home() {
   const [containerHeight, setContainerHeight] = useState(0);
   const titRef = useRef<HTMLDivElement>(null);
 
+  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 768);
+  // Detecta mudanças no tamanho da tela
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth <= 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   // Observa dinamicamente a altura do Tit
   useEffect(() => {
     const updateTitHeight = () => {
@@ -113,7 +124,9 @@ function Home() {
         style={{
           position: "fixed",
           top: `${navbarHeight + 9}px`,
-          width: `${navbarWidth}px`,
+          width: isSmallScreen ? "95%" : `${navbarWidth}px`,
+          left: isSmallScreen ? "50%" : "auto",
+          transform: isSmallScreen ? "translateX(-50%)" : "none",
           border: "1px solid black",
           paddingTop: "0px",
           paddingBottom: "1px",
@@ -125,7 +138,7 @@ function Home() {
       >
         <h3>Nossos Símbolos, nossa História</h3>
         <h5>
-          (Construindo o Futuro ... Xadrez de Olho no Futuro: 20/10/2025, 19:51)
+          (Construindo o Futuro ... Xadrez de Olho no Futuro: 23/10/2025, 21:55)
         </h5>
 
         {/* -- Inicia codigo Contador -- */}
@@ -150,7 +163,9 @@ function Home() {
         style={{
           position: "fixed",
           top: `${navbarHeight + titHeight + 9}px`,
-          width: `${navbarWidth}px`,
+          width: isSmallScreen ? "95%" : `${navbarWidth}px`,
+          left: isSmallScreen ? "50%" : "auto",
+          transform: isSmallScreen ? "translateX(-50%)" : "none",
           overflowY: "auto",
           maxHeight: `${containerHeight - 5}px`,
           border: "1px solid blue",

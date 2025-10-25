@@ -1,7 +1,8 @@
 /* Navbar.css */
 /* Base: mobile-first */
 
-/* alterado em 07/09/2025, 21:54 */
+/* alterado em 23/10/2025, 21:53 */
+/* Adicionado menu hambúrguer em 23/10/2025 */
 
 .navbar {
   position: fixed;
@@ -105,4 +106,114 @@ nav a.active {
 .NavLink a:hover::after,
 .NavLink a:focus::after {
   opacity: 1;
+}
+
+/* ========================================= */
+/* MENU HAMBÚRGUER - Telas Pequenas          */
+/* ========================================= */
+
+/* Botão hambúrguer escondido por padrão (telas grandes) */
+.hamburger-btn {
+  display: none;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 8px;
+  margin-right: 8px;
+  color: black;
+  transition: transform 0.2s ease;
+}
+
+.hamburger-btn:hover {
+  transform: scale(1.1);
+}
+
+.hamburger-btn:focus {
+  outline: 2px solid rgba(100, 200, 10, 0.6);
+  outline-offset: 2px;
+}
+
+/* Menu desktop visível por padrão */
+.menu-links-desktop {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.menu-links-desktop .menu-group {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* Menu mobile escondido por padrão */
+.menu-mobile {
+  position: fixed;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(100, 200, 10, 0.95);
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  max-width: 90%;
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.menu-mobile a {
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+  text-decoration: none;
+}
+
+.menu-mobile a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.menu-mobile a.active {
+  background-color: rgba(255, 255, 255, 0.3);
+  font-weight: bold;
+}
+
+/* Overlay de fundo quando menu mobile está aberto */
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 999;
+}
+
+/* TELAS PEQUENAS (≤ 768px) - Ativa menu hambúrguer */
+@media (max-width: 768px) {
+  /* Mostra o botão hambúrguer */
+  .hamburger-btn {
+    display: block !important;
+  }
+
+  /* Esconde o menu desktop */
+  .menu-links-desktop {
+    display: none !important;
+  }
+
+  /* Ajusta a navbar para manter largura e centralizar o hambúrguer */
+  nav[aria-label="Menu: Barra de Opções"] {
+    justify-content: center !important;
+    padding: 8px 12px !important;
+  }
+}
+
+/* Telas muito pequenas (celulares) */
+@media (max-width: 480px) {
+  .menu-mobile {
+    max-width: 95%;
+  }
 }
