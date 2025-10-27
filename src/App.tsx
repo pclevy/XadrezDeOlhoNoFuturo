@@ -7,6 +7,7 @@ import EventosHistoricos from "./pages/eventosHistoricos/EventosHistoricos";
 import EventosFuturos from "./pages/eventosFuturos/EventosFuturos";
 import ReliquiasXadrezUERJ from "./pages/reliquiasXadrezUERJ/ReliquiasXadrezUERJ";
 import Reliquias from "./pages/reliquias/Reliquias";
+import LinksUteis from "./pages/Links/linksUteis";
 import Formulario from "./pages/formularios/Formulario"; // ✅ IMPORTADO
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
 
         {/* ✅ NOVA ROTA ADICIONADA */}
         <Route path="/formularios/formulario" element={<Formulario />} />
+        <Route path="/linksUteis" element={<LinksUteis />} />
       </Routes>
     </Router>
   );

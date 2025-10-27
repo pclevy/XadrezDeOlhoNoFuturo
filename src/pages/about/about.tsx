@@ -8,17 +8,15 @@ function About() {
   const [navbarWidth, setNavbarWidth] = useState(0);
   const [titHeight, setTitHeight] = useState(0);
   const [containerHeight, setContainerHeight] = useState(0);
+  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 768);
 
   const titRef = useRef<HTMLDivElement>(null);
-
-  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 768);
 
   // Detecta mudanças no tamanho da tela
   useEffect(() => {
     const handleResize = () => {
       setIsSmallScreen(window.innerWidth <= 768);
     };
-
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
@@ -35,9 +33,7 @@ function About() {
     updateTitHeight();
 
     const observer = new ResizeObserver(updateTitHeight);
-    if (titRef.current) {
-      observer.observe(titRef.current);
-    }
+    if (titRef.current) observer.observe(titRef.current);
 
     window.addEventListener("resize", updateTitHeight);
 
@@ -63,7 +59,6 @@ function About() {
   // Carrega e ativa o anúncio do Google AdSense
   useEffect(() => {
     const scriptId = "adsbygoogle-script";
-
     if (!document.getElementById(scriptId)) {
       const script = document.createElement("script");
       script.id = scriptId;
@@ -72,7 +67,6 @@ function About() {
       script.async = true;
       script.setAttribute("data-ad-client", "ca-pub-7174891341008290");
       script.crossOrigin = "anonymous";
-
       script.onload = () => {
         try {
           window.adsbygoogle = window.adsbygoogle || [];
@@ -81,7 +75,6 @@ function About() {
           console.error("Erro ao carregar anúncio (onload):", e);
         }
       };
-
       document.head.appendChild(script);
     } else {
       try {
@@ -97,10 +90,11 @@ function About() {
     <div style={{ marginTop: 0, padding: "0px 5px", justifyItems: "center" }}>
       <Navbar onHeightChange={setNavbarHeight} onWidthChange={setNavbarWidth} />
 
+      {/* Cabeçalho fixo */}
       <div
         ref={titRef}
         className="Tit"
-        tabIndex={0} // agora entra no fluxo do Tab
+        tabIndex={0}
         style={{
           position: "fixed",
           top: `${navbarHeight + 9}px`,
@@ -108,10 +102,7 @@ function About() {
           left: isSmallScreen ? "50%" : "auto",
           transform: isSmallScreen ? "translateX(-50%)" : "none",
           border: "1px solid black",
-          paddingTop: "0px",
-          paddingBottom: "1px",
-          paddingLeft: "1px",
-          paddingRight: "1px",
+          padding: "1px",
           backgroundColor: "#fff",
           zIndex: 999,
         }}
@@ -121,9 +112,9 @@ function About() {
         <h5>(Construindo o Futuro ... 23/10/2025, 21:53)</h5>
       </div>
 
+      {/* Container azul rolável */}
       <div
         className="azul"
-        //tabIndex={0} // agora entra no fluxo do Tab
         style={{
           position: "fixed",
           top: `${navbarHeight + titHeight + 9}px`,
@@ -134,17 +125,10 @@ function About() {
           maxHeight: `${containerHeight - 5}px`,
           border: "1px solid blue",
           backgroundColor: "#e9f9ff",
-          //padding: "10px",
-          marginTop: 1,
-          paddingTop: "0px",
-          paddingBottom: "1px",
-          paddingLeft: "1px",
-          paddingRight: "1px",
-
-          backgroundImage: `url(${FundoArte})`, // 👈 aqui
-          backgroundRepeat: "repeat", // evita repetição
-          backgroundPosition: "center", // centraliza
-
+          backgroundImage: `url(${FundoArte})`,
+          backgroundRepeat: "repeat",
+          backgroundPosition: "center",
+          padding: "1px",
           zIndex: 998,
         }}
       >
@@ -164,7 +148,7 @@ function About() {
             style={{ color: "blue", textDecoration: "underline" }}
           >
             <span style={{ fontSize: "16px" }}>
-              <b>Fide ID: 2133890</b>
+              <b>Fide ID: 2133890 — Link externo</b>
             </span>
           </a>
         </div>
@@ -185,16 +169,12 @@ function About() {
             style={{ color: "blue", textDecoration: "underline" }}
           >
             <span style={{ fontSize: "16px" }}>
-              <b>Lattes ID: 6675953180309183</b>
+              <b>Lattes ID: 6675953180309183 — Link externo</b>
             </span>
           </a>
         </div>
 
-        {/*
-          <div tabIndex={0}> ... </div>
-          <div tabIndex={0}> ... </div>
-        */}
-
+        {/* Imagem da Esfinge */}
         <img
           src={Esfinge}
           className="logo-simbolo-pcd"
@@ -203,13 +183,50 @@ function About() {
           tabIndex={0}
           style={{ marginTop: "10px", maxWidth: "200px", outline: "none" }}
         />
+
+        {/* 🧩 Chess Puzzle of The Day (Chess.com) */}
+        <div
+          style={{
+            textAlign: "center",
+            marginTop: "20px",
+            marginBottom: "20px",
+          }}
+        >
+          <h4>♟️ Chess Puzzle of The Day</h4>
+
+          <iframe
+            src="https://www.chess.com/daily_puzzle"
+            title="Chess Puzzle of The Day"
+            width="380"
+            height="445"
+            style={{
+              border: "1px solid #888",
+              borderRadius: "8px",
+              overflow: "hidden",
+              backgroundColor: "#fff",
+            }}
+          ></iframe>
+
+          <p style={{ fontSize: "0.8rem", color: "#555" }}>
+            Fonte:{" "}
+            <a
+              href="https://www.chess.com/daily-chess-puzzle"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: "blue" }}
+            >
+              chess.com
+            </a>
+          </p>
+        </div>
+
         {/* Bloco do anúncio */}
         <div style={{ marginTop: "1px", textAlign: "center" }}>
           <ins
             className="adsbygoogle"
             style={{ display: "block" }}
             data-ad-client="ca-pub-7174891341008290"
-            data-ad-slot="9948140848" // Substitua com seu slot real!
+            data-ad-slot="9948140848"
             data-ad-format="auto"
             data-full-width-responsive="true"
           ></ins>
