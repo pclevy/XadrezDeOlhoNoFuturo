@@ -8,20 +8,20 @@ function About() {
   const [navbarWidth, setNavbarWidth] = useState(0);
   const [titHeight, setTitHeight] = useState(0);
   const [containerHeight, setContainerHeight] = useState(0);
-  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 768);
 
   const titRef = useRef<HTMLDivElement>(null);
 
-  // Detecta mudanças no tamanho da tela
+  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 768);
+
   useEffect(() => {
     const handleResize = () => {
       setIsSmallScreen(window.innerWidth <= 768);
     };
+
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Observa dinamicamente a altura do título
   useEffect(() => {
     const updateTitHeight = () => {
       if (titRef.current) {
@@ -36,14 +36,12 @@ function About() {
     if (titRef.current) observer.observe(titRef.current);
 
     window.addEventListener("resize", updateTitHeight);
-
     return () => {
       observer.disconnect();
       window.removeEventListener("resize", updateTitHeight);
     };
   }, []);
 
-  // Atualiza altura do container azul
   useEffect(() => {
     const updateHeight = () => {
       const availableHeight =
@@ -56,7 +54,6 @@ function About() {
     return () => window.removeEventListener("resize", updateHeight);
   }, [navbarHeight, titHeight]);
 
-  // Carrega e ativa o anúncio do Google AdSense
   useEffect(() => {
     const scriptId = "adsbygoogle-script";
     if (!document.getElementById(scriptId)) {
@@ -90,7 +87,6 @@ function About() {
     <div style={{ marginTop: 0, padding: "0px 5px", justifyItems: "center" }}>
       <Navbar onHeightChange={setNavbarHeight} onWidthChange={setNavbarWidth} />
 
-      {/* Cabeçalho fixo */}
       <div
         ref={titRef}
         className="Tit"
@@ -112,7 +108,6 @@ function About() {
         <h5>(Construindo o Futuro ... 23/10/2025, 21:53)</h5>
       </div>
 
-      {/* Container azul rolável */}
       <div
         className="azul"
         style={{
@@ -125,111 +120,133 @@ function About() {
           maxHeight: `${containerHeight - 5}px`,
           border: "1px solid blue",
           backgroundColor: "#e9f9ff",
+          padding: "10px",
           backgroundImage: `url(${FundoArte})`,
           backgroundRepeat: "repeat",
           backgroundPosition: "center",
-          padding: "1px",
           zIndex: 998,
         }}
       >
-        <div tabIndex={0} style={{ padding: "12px 0px 12px 0px" }}>
-          <span style={{ fontSize: "20px" }}>
-            <b>AI Paulo Cesar Levy</b>
-          </span>
-          <br />
-          <span style={{ fontSize: "16px" }}>
-            <b>Árbitro Internacional</b>
-          </span>
-          <br />
-          <a
-            href="https://ratings.fide.com/profile/2133890"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ color: "blue", textDecoration: "underline" }}
-          >
-            <span style={{ fontSize: "16px" }}>
-              <b>Fide ID: 2133890 — Link externo</b>
-            </span>
-          </a>
-        </div>
-
-        <div tabIndex={0} style={{ paddingBottom: 12 }}>
-          <span style={{ fontSize: "20px" }}>
-            <b>Ester A. Lima de Souza</b>
-          </span>
-          <br />
-          <span style={{ fontSize: "16px" }}>
-            <b>Mestre em Ciência da Informação</b>
-          </span>
-          <br />
-          <a
-            href="http://lattes.cnpq.br/6675953180309183"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ color: "blue", textDecoration: "underline" }}
-          >
-            <span style={{ fontSize: "16px" }}>
-              <b>Lattes ID: 6675953180309183 — Link externo</b>
-            </span>
-          </a>
-        </div>
-
-        {/* Imagem da Esfinge */}
-        <img
-          src={Esfinge}
-          className="logo-simbolo-pcd"
-          alt="Imagem de uma Esfinge, símbolo do site"
-          title="Imagem de uma Esfinge, símbolo do site"
-          tabIndex={0}
-          style={{ marginTop: "10px", maxWidth: "200px", outline: "none" }}
-        />
-
-        {/* 🧩 Chess Puzzle of The Day (Chess.com) */}
+        {/* Layout com duas colunas */}
         <div
           style={{
-            textAlign: "center",
-            marginTop: "20px",
-            marginBottom: "20px",
+            display: "flex",
+            flexDirection: isSmallScreen ? "column" : "row",
+            alignItems: "flex-start",
+            justifyContent: "space-between",
+            gap: "20px",
           }}
         >
-          <h4>♟️ Chess Puzzle of The Day</h4>
+          {/* Coluna esquerda - conteúdo principal */}
+          <div style={{ flex: 1 }}>
+            <div tabIndex={0} style={{ padding: "12px 0px 12px 0px" }}>
+              <span style={{ fontSize: "20px" }}>
+                <b>AI Paulo Cesar Levy</b>
+              </span>
+              <br />
+              <span style={{ fontSize: "16px" }}>
+                <b>Árbitro Internacional</b>
+              </span>
+              <br />
+              <a
+                href="https://ratings.fide.com/profile/2133890"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: "blue", textDecoration: "underline" }}
+              >
+                <span style={{ fontSize: "16px" }}>
+                  <b>Fide ID: 2133890 — Link externo</b>
+                </span>
+              </a>
+            </div>
 
-          <iframe
-            src="https://www.chess.com/daily_puzzle"
-            title="Chess Puzzle of The Day"
-            width="380"
-            height="445"
+            <div tabIndex={0} style={{ paddingBottom: 12 }}>
+              <span style={{ fontSize: "20px" }}>
+                <b>Ester A. Lima de Souza</b>
+              </span>
+              <br />
+              <span style={{ fontSize: "16px" }}>
+                <b>Mestre em Ciência da Informação</b>
+              </span>
+              <br />
+              <a
+                href="http://lattes.cnpq.br/6675953180309183"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: "blue", textDecoration: "underline" }}
+              >
+                <span style={{ fontSize: "16px" }}>
+                  <b>Lattes ID: 6675953180309183</b>
+                </span>
+              </a>
+            </div>
+
+            <div style={{ textAlign: "center", marginTop: "10px" }}>
+              <img
+                src={Esfinge}
+                className="logo-simbolo-pcd"
+                alt="Imagem de uma Esfinge, símbolo do site"
+                title="Imagem de uma Esfinge, símbolo do site"
+                tabIndex={0}
+                style={{
+                  maxWidth: "200px",
+                  outline: "none",
+                  borderRadius: "8px",
+                  border: "1px solid #999",
+                }}
+              />
+              <p
+                style={{ fontSize: "0.9rem", color: "#333", marginTop: "5px" }}
+              >
+                Símbolo do Projeto Esfinge
+              </p>
+            </div>
+
+            {/* Bloco do anúncio */}
+            <div style={{ marginTop: "20px", textAlign: "center" }}>
+              <ins
+                className="adsbygoogle"
+                style={{ display: "block" }}
+                data-ad-client="ca-pub-7174891341008290"
+                data-ad-slot="9948140848"
+                data-ad-format="auto"
+                data-full-width-responsive="true"
+              ></ins>
+            </div>
+          </div>
+
+          {/* Coluna direita - Puzzle */}
+          <div
             style={{
-              border: "1px solid #888",
-              borderRadius: "8px",
-              overflow: "hidden",
-              backgroundColor: "#fff",
+              flexShrink: 0,
+              textAlign: "center",
+              width: isSmallScreen ? "100%" : "380px",
             }}
-          ></iframe>
-
-          <p style={{ fontSize: "0.8rem", color: "#555" }}>
-            Fonte:{" "}
-            <a
-              href="https://www.chess.com/daily-chess-puzzle"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ color: "blue" }}
-            >
-              chess.com
-            </a>
-          </p>
-        </div>
-
-        {/* Bloco do anúncio */}
-        <div style={{ marginTop: "1px", textAlign: "center" }}>
-          <ins
-            className="adsbygoogle"
-            style={{ display: "block" }}
-            data-ad-client="ca-pub-7174891341008290"
-            data-ad-slot="9948140848"
-            data-ad-format="auto"
-            data-full-width-responsive="true"
-          ></ins>
+          >
+            <h4>♟️ Chess Puzzle of The Day</h4>
+            <iframe
+              src="https://lichess.org/training/frame?theme=blue&bg=light"
+              title="Lichess Puzzle of The Day"
+              width="180"
+              height="200"
+              style={{
+                border: "1px solid #888",
+                borderRadius: "8px",
+                background: "#f9f9f9",
+              }}
+            ></iframe>
+            <p style={{ fontSize: "0.8rem", color: "#444", marginTop: "5px" }}>
+              Fonte:{" "}
+              <a
+                href="https://lichess.org/training"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: "blue" }}
+              >
+                lichess.org
+              </a>
+            </p>
+          </div>
         </div>
       </div>
     </div>
