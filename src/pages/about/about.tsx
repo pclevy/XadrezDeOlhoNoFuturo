@@ -1,3 +1,6 @@
+//About.tsx
+//2025.10.27 22:13
+
 import { useState, useRef, useEffect } from "react";
 import Navbar from "../../components/Navbar";
 import Esfinge from "../../assets/esfinge.png";
@@ -106,7 +109,7 @@ function About() {
       >
         <h3>Sobre Nós</h3>
         <h4>(contato: 'projetoesfinge97@gmail.com')</h4>
-        <h5>(Construindo o Futuro ... 23/10/2025, 21:53)</h5>
+        <h5>(Construindo o Futuro ... 27/10/2025, 22:13)</h5>
       </div>
 
       <div
