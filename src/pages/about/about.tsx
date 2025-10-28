@@ -9,6 +9,7 @@ function About() {
   const [titHeight, setTitHeight] = useState(0);
   const [containerHeight, setContainerHeight] = useState(0);
 
+  //const titRef = useRef(null);
   const titRef = useRef<HTMLDivElement>(null);
 
   const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 768);
@@ -127,7 +128,6 @@ function About() {
           zIndex: 998,
         }}
       >
-        {/* Layout com duas colunas */}
         <div
           style={{
             display: "flex",
@@ -137,7 +137,6 @@ function About() {
             gap: "20px",
           }}
         >
-          {/* Coluna esquerda - conteúdo principal */}
           <div style={{ flex: 1 }}>
             <div tabIndex={0} style={{ padding: "12px 0px 12px 0px" }}>
               <span style={{ fontSize: "20px" }}>
@@ -202,7 +201,50 @@ function About() {
               </p>
             </div>
 
-            {/* Bloco do anúncio */}
+            {isSmallScreen && (
+              <div
+                style={{
+                  textAlign: "center",
+                  marginTop: "10px",
+                  padding: "0px",
+                }}
+              >
+                {/* <h4>♟️ Chess Puzzle of The Day</h4> */}
+                <iframe
+                  src="https://lichess.org/training/frame?theme=blue&bg=light"
+                  title="Lichess Puzzle of The Day"
+                  width="180"
+                  height="200"
+                  //width="100%"
+                  //height="200"
+                  style={{
+                    border: "1px solid #888",
+                    borderRadius: "8px",
+                    background: "#f9f9f9",
+                    maxWidth: "100%",
+                    //width: "100%",
+                  }}
+                ></iframe>
+                <p
+                  style={{
+                    fontSize: "0.8rem",
+                    color: "#444",
+                    marginTop: "5px",
+                  }}
+                >
+                  Fonte:{" "}
+                  <a
+                    href="https://lichess.org/training"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ color: "blue" }}
+                  >
+                    lichess.org
+                  </a>
+                </p>
+              </div>
+            )}
+
             <div style={{ marginTop: "20px", textAlign: "center" }}>
               <ins
                 className="adsbygoogle"
@@ -215,38 +257,42 @@ function About() {
             </div>
           </div>
 
-          {/* Coluna direita - Puzzle */}
-          <div
-            style={{
-              flexShrink: 0,
-              textAlign: "center",
-              width: isSmallScreen ? "100%" : "380px",
-            }}
-          >
-            <h4>♟️ Chess Puzzle of The Day</h4>
-            <iframe
-              src="https://lichess.org/training/frame?theme=blue&bg=light"
-              title="Lichess Puzzle of The Day"
-              width="180"
-              height="200"
+          {!isSmallScreen && (
+            <div
               style={{
-                border: "1px solid #888",
-                borderRadius: "8px",
-                background: "#f9f9f9",
+                flexShrink: 0,
+                textAlign: "center",
+                width: "380px",
               }}
-            ></iframe>
-            <p style={{ fontSize: "0.8rem", color: "#444", marginTop: "5px" }}>
-              Fonte:{" "}
-              <a
-                href="https://lichess.org/training"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{ color: "blue" }}
+            >
+              <h4>♟️ Chess Puzzle of The Day</h4>
+              <iframe
+                src="https://lichess.org/training/frame?theme=blue&bg=light"
+                title="Lichess Puzzle of The Day"
+                width="180"
+                height="200"
+                style={{
+                  border: "1px solid #888",
+                  borderRadius: "8px",
+                  background: "#f9f9f9",
+                  maxWidth: "100%",
+                }}
+              ></iframe>
+              <p
+                style={{ fontSize: "0.8rem", color: "#444", marginTop: "5px" }}
               >
-                lichess.org
-              </a>
-            </p>
-          </div>
+                Fonte:{" "}
+                <a
+                  href="https://lichess.org/training"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: "blue" }}
+                >
+                  lichess.org
+                </a>
+              </p>
+            </div>
+          )}
         </div>
       </div>
     </div>
