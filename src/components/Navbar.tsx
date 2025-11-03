@@ -1,4 +1,5 @@
-/* alterado em 23/10/2025, 21:52 */
+/* Navbar.tsx */
+/* alterado em 03/11/2025, 14:16 */
 /* Adicionado menu hambúrguer em 23/10/2025 */
 
 import { useRef, useEffect, useState } from "react";
@@ -127,6 +128,15 @@ const Navbar = ({ onHeightChange, onWidthChange }: NavbarProps) => {
               onClick={() => setMenuOpen(false)}
             >
               Relíquias
+            </NavLink>{" "}
+            &nbsp;{" "}
+            <NavLink
+              to="/XDesafios"
+              className={({ isActive }) => (isActive ? "active" : "")}
+              title="Aba 'Desafio e Links'"
+              onClick={() => setMenuOpen(false)}
+            >
+              Desafio
             </NavLink>{" "}
             &nbsp;{" "}
             <NavLink

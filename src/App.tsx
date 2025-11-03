@@ -1,4 +1,7 @@
 // App.tsx
+/* alterado em 03/11/2025, 14:16 */
+/* Adicionado menu hambúrguer em 23/10/2025 */
+
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/home/home";
 import About from "./pages/about/about";
@@ -7,7 +10,7 @@ import EventosHistoricos from "./pages/eventosHistoricos/EventosHistoricos";
 import EventosFuturos from "./pages/eventosFuturos/EventosFuturos";
 import ReliquiasXadrezUERJ from "./pages/reliquiasXadrezUERJ/ReliquiasXadrezUERJ";
 import Reliquias from "./pages/reliquias/Reliquias";
-import LinksUteis from "./pages/Links/linksUteis";
+import XDesafios from "./pages/XDesafios/XDesafios";
 import Formulario from "./pages/formularios/Formulario"; // ✅ IMPORTADO
 
 function App() {
@@ -24,7 +27,7 @@ function App() {
 
         {/* ✅ NOVA ROTA ADICIONADA */}
         <Route path="/formularios/formulario" element={<Formulario />} />
-        <Route path="/linksUteis" element={<LinksUteis />} />
+        <Route path="/XDesafios" element={<XDesafios />} />
       </Routes>
     </Router>
   );

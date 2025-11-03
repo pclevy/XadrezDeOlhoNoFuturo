@@ -10,9 +10,9 @@ import FundoArte from "../../assets/chesgame.jpg";
 
 //import { Link } from "react-router-dom"; //*** Receber Arquivo ***
 
-import { eventos, type Evento } from "../../data/linksUteis";
+import { eventos, type Evento } from "../../data/xDesafiosLinksUteis";
 
-function LinksUteis() {
+function XDesafios() {
   const [navbarHeight, setNavbarHeight] = useState(0);
   const [navbarWidth, setNavbarWidth] = useState(0);
   const [titHeight, setTitHeight] = useState(0);
@@ -105,13 +105,10 @@ function LinksUteis() {
           zIndex: 999,
         }}
       >
-        <h3 tabIndex={0}>Eventos Futuros</h3>
-        <h5 tabIndex={0}>(em construção ... 24.10.2025, 21:56)</h5>
-        <h4
-          tabIndex={0}
-          aria-label="Abaixo lista de Eventos, sendo que cada Evento ao receber foco, apresenta ao lado direito o cartaz correspondente"
-        >
-          Lista de Eventos:
+        <h3 tabIndex={0}>'Desafio do Dia' e Links Úteis</h3>
+        <h5 tabIndex={0}>(em construção ... 03.11.2025, 11:01)</h5>
+        <h4 tabIndex={0} aria-label="Abaixo 'Desafio do Dia' e Links Úteis">
+          'Desafio do Dia' e Links Úteis:
         </h4>
       </div>
 
@@ -212,6 +209,7 @@ function LinksUteis() {
                 tabIndex={0}
                 role="button"
                 style={{
+                  textAlign: "left",
                   cursor: "pointer",
                   padding: "2px 2px",
                   marginTop: "2px",
@@ -226,12 +224,65 @@ function LinksUteis() {
                   fontSize: "14px",
                 }}
               >
-                {evento.nome}
+                <span
+                  style={{
+                    fontWeight:
+                      evento.nome === "Desafio do Dia" ? "bold" : "normal",
+                  }}
+                >
+                  {evento.nome}
+                </span>
               </li>
             ))}
           </ul>
 
           <div>
+            {/* <h4>♟️ Chess Puzzle of The Day</h4> */}
+            {eventoSelecionado.nome === "Desafio do Dia" && (
+              <>
+                <iframe
+                  src="https://lichess.org/training/frame?theme=blue&bg=light"
+                  title="Lichess Puzzle of The Day"
+                  width="180"
+                  height="225"
+                  style={{
+                    border: "1px solid #888",
+                    borderRadius: "8px",
+                    background: "#f9f9f9",
+                    maxWidth: "100%",
+                  }}
+                ></iframe>
+                <p
+                  style={{
+                    fontSize: "0.8rem",
+                    color: "#444",
+                    marginTop: "5px",
+                  }}
+                >
+                  Fonte:{" "}
+                  <a
+                    href="https://lichess.org/training"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ color: "blue" }}
+                  >
+                    lichess.org
+                  </a>
+                </p>
+              </>
+            )}
+
+            <div style={{ marginTop: "20px", textAlign: "center" }}>
+              <ins
+                className="adsbygoogle"
+                style={{ display: "block" }}
+                data-ad-client="ca-pub-7174891341008290"
+                data-ad-slot="9948140848"
+                data-ad-format="auto"
+                data-full-width-responsive="true"
+              ></ins>
+            </div>
+
             <Zoom>
               <img
                 ref={imgRef}
@@ -240,16 +291,17 @@ function LinksUteis() {
                 title={eventoSelecionado.descricaoCurta}
                 tabIndex={-1}
                 style={{
-                  maxWidth: "300px",
-                  maxHeight: "400px",
-                  borderRadius: "12px",
+                  maxWidth: "210px",
+                  maxHeight: "280px",
+                  borderRadius: "8px",
 
                   //maxWidth: `${navbarWidth / 2}px`,
                   //maxWidth: "40%",
                   //maxWidth: "400px",
                   //maxHeight: "400px",
                   //borderRadius: "8px",
-                  //padding: 0,
+                  padding: "0px",
+                  marginTop: "0px",
                   //marginRight: "0px",
                   //marginLeft: "0px",
                   //border: "1px solid red",
@@ -274,6 +326,8 @@ function LinksUteis() {
                   }
                 }}
               />
+              <br />
+              <a href={eventoSelecionado.link}>{eventoSelecionado.sigla}</a>
             </Zoom>
           </div>
         </div>
@@ -297,4 +351,4 @@ function LinksUteis() {
   );
 }
 
-export default LinksUteis;
+export default XDesafios;

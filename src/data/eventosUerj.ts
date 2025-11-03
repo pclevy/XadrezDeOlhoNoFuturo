@@ -9,7 +9,7 @@ export interface Evento {
 export const eventos: Evento[] = [
   {
     id: 0,
-    nome: "Selecionar Evento abaixo",
+    nome: "Dsafio do Dia",
     imagem: "images/Imagem_neutra.png",
   },
   {

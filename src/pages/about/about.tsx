@@ -267,34 +267,7 @@ function About() {
                 textAlign: "center",
                 width: "380px",
               }}
-            >
-              <h4>♟️ Chess Puzzle of The Day</h4>
-              <iframe
-                src="https://lichess.org/training/frame?theme=blue&bg=light"
-                title="Lichess Puzzle of The Day"
-                width="180"
-                height="200"
-                style={{
-                  border: "1px solid #888",
-                  borderRadius: "8px",
-                  background: "#f9f9f9",
-                  maxWidth: "100%",
-                }}
-              ></iframe>
-              <p
-                style={{ fontSize: "0.8rem", color: "#444", marginTop: "5px" }}
-              >
-                Fonte:{" "}
-                <a
-                  href="https://lichess.org/training"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ color: "blue" }}
-                >
-                  lichess.org
-                </a>
-              </p>
-            </div>
+            ></div>
           )}
         </div>
       </div>

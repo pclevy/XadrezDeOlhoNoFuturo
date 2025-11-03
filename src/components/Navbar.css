@@ -11,12 +11,12 @@
   transform: translateX(-50%);
   width: 95%; /* ocupa quase toda a largura em telas pequenas */
   background-color: rgba(100, 200, 10, 0.2);
-  padding: 4px 6px;
+  padding: 3px 3px;
   display: flex;
   flex-wrap: wrap; /* quebra se os itens não couberem */
   justify-content: center;
   align-items: center;
-  gap: 8px;
+  gap: 3px;
   z-index: 1000;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
@@ -26,8 +26,8 @@
 @media (min-width: 600px) {
   .navbar {
     max-width: 400px;
-    padding: 2px 6px;
-    gap: 10px;
+    padding: 2px 3px;
+    gap: 3px;
   }
 }
 
@@ -35,7 +35,7 @@
 @media (min-width: 900px) {
   .navbar {
     max-width: 600px;
-    padding: 8px 16px;
+    padding: 3px 4px;
   }
 }
 
@@ -49,7 +49,7 @@ body {
 .navbar a {
   color: blue;
   text-decoration: none;
-  padding: 4px 8px;
+  padding: 3px 4px;
   font-weight: bold;
   border-radius: 4px;
   transition: background-color 0.3s ease, transform 0.2s ease;
@@ -68,7 +68,7 @@ body {
 nav a {
   color: black; /* cor padrão */
   text-decoration: underline;
-  padding: 4px 6px;
+  padding: 3px 4px;
 }
 
 nav a.active {
@@ -92,7 +92,7 @@ nav a.active {
   transform: translateX(-50%);
   background: #333;
   color: #fff;
-  padding: 4px 8px;
+  padding: 3px 4px;
   border-radius: 4px;
   font-size: 12px;
   white-space: nowrap;
@@ -119,8 +119,8 @@ nav a.active {
   border: none;
   font-size: 24px;
   cursor: pointer;
-  padding: 8px;
-  margin-right: 8px;
+  padding: 4px;
+  margin-right: 4px;
   color: black;
   transition: transform 0.2s ease;
 }
@@ -137,14 +137,14 @@ nav a.active {
 /* Menu desktop visível por padrão */
 .menu-links-desktop {
   display: flex;
-  gap: 10px;
+  gap: 4px;
   flex-wrap: wrap;
   align-items: center;
 }
 
 .menu-links-desktop .menu-group {
   display: flex;
-  gap: 10px;
+  gap: 4px;
   align-items: center;
 }
 
@@ -155,18 +155,18 @@ nav a.active {
   left: 50%;
   transform: translateX(-50%);
   background-color: rgba(100, 200, 10, 0.95);
-  padding: 12px;
+  padding: 4px;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   max-width: 90%;
   z-index: 1001;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 4px;
 }
 
 .menu-mobile a {
-  padding: 8px 12px;
+  padding: 4px 6px;
   border-radius: 4px;
   transition: background-color 0.2s ease;
   text-decoration: none;
@@ -207,7 +207,7 @@ nav a.active {
   /* Ajusta a navbar para manter largura e centralizar o hambúrguer */
   nav[aria-label="Menu: Barra de Opções"] {
     justify-content: center !important;
-    padding: 8px 12px !important;
+    padding: 4px 6px !important;
   }
 }
 
