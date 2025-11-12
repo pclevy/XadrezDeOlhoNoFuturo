@@ -1,3 +1,6 @@
+//xDesafiosLinksUteis.ts
+// alterado em 2025/11/03, 16:33
+
 export interface Evento {
   id: number;
   nome: string;
@@ -7,8 +10,6 @@ export interface Evento {
   link?: string;
   sigla?: string;
 }
-
-// alterado em 27/09/2025, 19:14
 
 export const eventos: Evento[] = [
   {
@@ -59,7 +60,7 @@ export const eventos: Evento[] = [
 
   {
     id: 5,
-    nome: "International Chess Federation",
+    nome: "FIDE-Federação International de Xadrez",
     imagem: "https://www.fide.com/img/logo1.png",
     descricaoCurta: "Fédération internationale des échecs",
     title: "Fédération internationale des échecs",

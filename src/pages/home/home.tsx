@@ -1,3 +1,6 @@
+// home.tsx
+// Alterado em: 12/11/2025, 20:00
+
 //import xadrezOlho from "../../assets/xadrezOlho.png";
 import xadrezOlho from "../../assets/xadrezOlho.svg";
 import cavaloPretoEsqLogo from "../../assets/cavalo-preto-EsqLogo.png";
@@ -12,6 +15,8 @@ import Esfinge from "../../assets/esfinge.png";
 import ImagemZoomHP from "../eventosHistoricos/ImageZoomHP";
 
 import FundoArte from "../../assets/chesgame.jpg";
+
+import novembroAzul from "../../assets/novembroAzul.png";
 
 import "./home.css";
 
@@ -138,7 +143,7 @@ function Home() {
       >
         <h3>Nossos Símbolos, nossa História</h3>
         <h5>
-          (Construindo o Futuro ... Xadrez de Olho no Futuro: 23/10/2025, 21:55)
+          (Construindo o Futuro ... Xadrez de Olho no Futuro: 12/11/2025, 20:00)
         </h5>
 
         {/* -- Inicia codigo Contador -- */}
@@ -184,6 +189,31 @@ function Home() {
           zIndex: 998,
         }}
       >
+        <div
+          style={{
+            position: "absolute",
+            margin: "0px",
+            top: "0px",
+            left: "0px",
+            padding: 0,
+            //border: "1px solid red",
+            lineHeight: 0, // elimina espaçamento interno invisível
+            display: "inline-block", // garante que a div tenha o tamanho exato da imagem
+            zIndex: 998,
+          }}
+        >
+          <img
+            src={novembroAzul}
+            alt="Novembro Azul"
+            title="'Novembro Azul' - Campanha contra o Câncer de Próstata (é só um 'toque')!"
+            tabIndex={0}
+            className="logo-novembroAzul"
+            style={{
+              backgroundColor: "transparent", // garante transparência no PNG
+            }}
+          />
+        </div>
+
         <div>
           <img
             src={peaoAvancado}

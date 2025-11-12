@@ -1,5 +1,5 @@
 /* Navbar.tsx */
-/* alterado em 03/11/2025, 14:16 */
+/* alterado em 03/11/2025, 16:12 */
 /* Adicionado menu hambúrguer em 23/10/2025 */
 
 import { useRef, useEffect, useState } from "react";
@@ -211,6 +211,16 @@ const Navbar = ({ onHeightChange, onWidthChange }: NavbarProps) => {
             >
               Relíquias
             </NavLink>
+
+            <NavLink
+              to="/XDesafios"
+              className={({ isActive }) => (isActive ? "active" : "")}
+              title="Aba 'Desafio e Links'"
+              onClick={() => setMenuOpen(false)}
+            >
+              Desafio
+            </NavLink>
+
             <NavLink
               to="/about"
               className={({ isActive }) => (isActive ? "active" : "")}

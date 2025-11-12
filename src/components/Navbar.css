@@ -1,7 +1,7 @@
 /* Navbar.css */
 /* Base: mobile-first */
 
-/* alterado em 23/10/2025, 21:53 */
+/* alterado em 03/11/2025, 16:02 */
 /* Adicionado menu hambúrguer em 23/10/2025 */
 
 .navbar {
@@ -152,8 +152,8 @@ nav a.active {
 .menu-mobile {
   position: fixed;
   top: 50px;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 8px; /* cola no lado esquerdo com pequena margem */
+  transform: none; /* remove o deslocamento horizontal */
   background-color: rgba(100, 200, 10, 0.95);
   padding: 4px;
   border-radius: 8px;
@@ -163,6 +163,7 @@ nav a.active {
   display: flex;
   flex-direction: column;
   gap: 4px;
+  align-items: flex-start; /* garante alinhamento à esquerda */
 }
 
 .menu-mobile a {
@@ -190,6 +191,7 @@ nav a.active {
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.3);
   z-index: 999;
+  align-items: left;
 }
 
 /* TELAS PEQUENAS (≤ 768px) - Ativa menu hambúrguer */
