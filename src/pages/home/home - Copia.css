@@ -1,5 +1,5 @@
 /* home.css */
-/* Alterado em: 13/11/2025, 21:25 */
+/* Alterado em: 12/11/2025, 20:00 */
 
 #root {
   max-width: 1280px;
@@ -90,7 +90,7 @@ body {
 }
 
 .logo-novembroAzul {
-  height: 3.5em;
+  height: 2.5em;
   padding: 0;
   margin: 0;
   margin-top: 1px;
@@ -185,34 +185,21 @@ body {
 .tooltip {
   display: none;
   background-color: black;
+  /* border: 1px solid #626262; */
   color: #fff;
   position: absolute;
-  /* bottom: 2px; */
-  bottom: 100%;
+  /* position: relative; *
+
+  /* top: 1px; */
+  bottom: 2px;
+
   left: 1%;
+  /* width: 230px; */
   min-width: 230px;
   padding: 5px 5px;
   font-size: 14px;
   border-radius: 5px;
   font-weight: normal;
-  height: "auto";
-
-  &.right {
-    @media (max-width: 450px) {
-      left: unset;
-      right: 1%;
-      background-color: #000;
-    }
-  }
-
-  &.at_side {
-    @media (max-width: 450px) {
-      top: -220%;
-      left: 110%;
-      right: unset;
-      background-color: #2277ff;
-    }
-  }
 }
 
 .tooltip-anchor:hover .tooltip {
@@ -220,7 +207,6 @@ body {
 }
 
 .tooltip-content::after {
-  /* Defina a seta */
   content: "";
   position: absolute;
   /*top: 10%;*/
@@ -228,9 +214,7 @@ body {
   margin-left: -10px;
   border-width: 10px;
   border-style: solid;
-  /* border-color: #f00 transparent transparent transparent; */
-  /* border-color: #f00 transparent transparent; */
-  border-color: transparent;
+  border-color: #000 transparent transparent transparent;
 }
 
 .azul div:focus,

@@ -1,5 +1,5 @@
 // home.tsx
-// Alterado em: 12/11/2025, 20:00
+// Alterado em: 13/11/2025, 21:25
 
 //import xadrezOlho from "../../assets/xadrezOlho.png";
 import xadrezOlho from "../../assets/xadrezOlho.svg";
@@ -11,12 +11,11 @@ import SimboloDeficienciaMobilidadeLogo from "../../assets/Simbolo-Deficiencia-M
 import cavaloPretoDirLogo from "../../assets/cavalo-preto-DirLogo.png";
 import peaoAvancado from "../../assets/peaoAvancado.png";
 import Esfinge from "../../assets/esfinge.png";
-//import ImagemZoomHP from "../eventosHistoricos/ImageZoomHP.tsx";
 import ImagemZoomHP from "../eventosHistoricos/ImageZoomHP";
 
 import FundoArte from "../../assets/chesgame.jpg";
 
-import novembroAzul from "../../assets/novembroAzul.png";
+import novembroAzul from "../../assets/novembroAzul.svg";
 
 import "./home.css";
 
@@ -143,7 +142,7 @@ function Home() {
       >
         <h3>Nossos Símbolos, nossa História</h3>
         <h5>
-          (Construindo o Futuro ... Xadrez de Olho no Futuro: 12/11/2025, 20:00)
+          (Construindo o Futuro ... Xadrez de Olho no Futuro: 13/11/2025, 21:25)
         </h5>
 
         {/* -- Inicia codigo Contador -- */}
@@ -189,6 +188,7 @@ function Home() {
           zIndex: 998,
         }}
       >
+        {/* -------- esfinge x laço ---------------------------------- */}
         <div
           style={{
             position: "absolute",
@@ -196,23 +196,57 @@ function Home() {
             top: "0px",
             left: "0px",
             padding: 0,
+
+            alignItems: "left",
+            //gap: "6px",
+
             //border: "1px solid red",
-            lineHeight: 0, // elimina espaçamento interno invisível
+            //lineHeight: 0, // elimina espaçamento interno invisível
             display: "inline-block", // garante que a div tenha o tamanho exato da imagem
-            zIndex: 998,
           }}
         >
-          <img
-            src={novembroAzul}
-            alt="Novembro Azul"
-            title="'Novembro Azul' - Campanha contra o Câncer de Próstata (é só um 'toque')!"
-            tabIndex={0}
-            className="logo-novembroAzul"
-            style={{
-              backgroundColor: "transparent", // garante transparência no PNG
-            }}
-          />
+          <span className="tooltip-anchor" style={{ zIndex: 1 }}>
+            <span>
+              <img
+                src={novembroAzul}
+                className="logo-novembroAzul"
+                tabIndex={0} // agora entra no fluxo do Tab
+                alt="Ícone NovembroAzul"
+                title="Novembro Azul' - Campanha contra o Câncer de Próstata (é só um 'toque')!"
+                style={{
+                  //marginTop: 90,
+                  //height: "100",
+                  width: "auto",
+                  backgroundColor: "transparent", // garante transparência no PNG
+                }} // ou defina de acordo com seu layout
+              />
+
+              <div
+                className="tooltip at_side"
+                style={{
+                  //marginTop: "-58",
+                  //marginLeft: "30px",
+                  height: "auto",
+                }}
+              >
+                <div className="tooltip-content">
+                  "Novembro Azul" - Campanha contra o Câncer de Próstata (é só
+                  um 'toque')!
+                </div>
+              </div>
+            </span>
+          </span>
+          <span tabIndex={0}> {/* // agora entra no fluxo do Tab> */}</span>
         </div>
+
+        <div
+          style={{
+            display: "inline-flex",
+            alignItems: "center",
+            //gap: "6px",
+          }}
+        ></div>
+        {/* ---------------------------------------------- */}
 
         <div>
           <img
@@ -292,7 +326,7 @@ function Home() {
           E vem aí a nova versão do antigo <i>site </i>
           <span className="tooltip-anchor">
             <span>"Xadrez UERJ"</span>
-            <div className="tooltip">
+            <div className="tooltip right">
               <div className="tooltip-content">
                 XadrezUERJ esteve hospedado na UERJ, em 1997-2004 e 2010-2013!
               </div>
