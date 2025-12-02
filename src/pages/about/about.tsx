@@ -107,7 +107,7 @@ function About() {
       >
         <h3>Sobre Nós</h3>
         <h4>(contato: 'projetoesfinge97@gmail.com')</h4>
-        <h5>(Construindo o Futuro ... 03/11/2025, 16:49)</h5>
+        <h5>(Construindo o Futuro ... 02/12/2025, 17:57)</h5>
       </div>
 
       {/* Conteúdo azul centralizado */}
@@ -155,7 +155,8 @@ function About() {
             </span>
           </a>
         </div>
-
+        <br />
+        <br />
         {/* Ester A. Lima de Souza */}
         <div tabIndex={0} style={{ paddingBottom: 12 }}>
           <span style={{ fontSize: "20px" }}>
