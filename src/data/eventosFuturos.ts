@@ -15,7 +15,7 @@ export const eventos: Evento[] = [
     imagem: "images/Imagem_neutra.png",
   },
   {
-    id: 6,
+    id: 5,
     nome: 'I Torneio "Xadrez de Olho no Futuro"',
     imagem: "images/FolderPetropolis251129.jpg",
     descricaoCurta:
@@ -24,7 +24,7 @@ export const eventos: Evento[] = [
   },
 
   {
-    id: 5,
+    id: 4,
     nome: "Campeonatos Estaduais Absolutos de Xadrez Blitz e Rápido – 2025",
     imagem:
       "https://fexerj.org.br/wp-content/uploads/2025/09/ESTBLZRAPABS2025_imgdest.jpg",
@@ -33,7 +33,7 @@ export const eventos: Evento[] = [
     title: "Campeonatos Estaduais Absolutos de Xadrez Blitz e Rápido – 2025",
   },
   {
-    id: 4,
+    id: 3,
     nome: "Campeonatos Estaduais Femininos de Xadrez Blitz e Rápido – 2025",
     imagem:
       "https://fexerj.org.br/wp-content/uploads/2025/09/Imagem-do-WhatsApp-de-2025-09-26-as-19.03.53_723fbd77.jpg",
@@ -42,7 +42,7 @@ export const eventos: Evento[] = [
     title: "Campeonatos Estaduais Femininos de Xadrez Blitz e Rápido – 2025",
   },
   {
-    id: 3,
+    id: 2,
     nome: "Campeonato do Interior Absoluto 2025",
     imagem:
       "https://fexerj.org.br/wp-content/uploads/2025/09/interiorfexerj2025-capa.jpg",
@@ -52,21 +52,11 @@ export const eventos: Evento[] = [
   },
 
   {
-    id: 2,
+    id: 1,
     nome: "Copa Brasil para Deficientes Visuais - Regional Centro 2025",
     imagem: "images/FBXDV-RegionalCentro2025.jpg",
     descricaoCurta:
       "Informações da Copa Brasil de Xadrez, da FBXDV, para Deficientes Visuais 2025 - Etapa 'Regional Centro', Cuiabá/MT, de a 5 de outubro/2025\n Mais Informações em www.fbxdv.org.br",
     title: "Campeonato do Interior Absoluto 2025",
-  },
-
-  {
-    id: 1,
-    nome: "Campeonato Carioca Absoluto – 2025",
-    imagem:
-      "https://fexerj.org.br/wp-content/uploads/2025/09/imagemdestaque-carioca2025.jpg",
-    descricaoCurta:
-      "Cartaz do Campeonato Carioca Absoluto 2025, nos dias 27 e 28 de setembro, na PUC-Rio (Salão da Pastoral), na Gávea, RJ. Serão 6 rodadas com ritmo de 45min + 15s por lance. Inscrição: R$ 60,00. A imagem mostra duas pessoas jogando xadrez na orla da praia, com vista para o mar e o Pão de Açúcar ao fundo.\n Mais Informações em www.fexerj.org.br",
-    title: "Campeonato Carioca Absoluto – 2025",
   },
 ];

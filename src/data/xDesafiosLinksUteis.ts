@@ -20,7 +20,7 @@ export const eventos: Evento[] = [
   {
     id: 1,
     nome: "Federação Brasileira de Xadrez para Deficientes Visuais",
-    imagem: "images/Logo_FBXDV.png",
+    imagem: "images/LogoFBXDV.png",
     descricaoCurta:
       "Link para o 'site' da FBXDV (Federação Brasileira de Xadrez para Deficientes Visuais",
     title:
