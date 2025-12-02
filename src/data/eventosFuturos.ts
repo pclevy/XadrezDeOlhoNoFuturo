@@ -17,7 +17,7 @@ export const eventos: Evento[] = [
   {
     id: 5,
     nome: 'I Torneio "Xadrez de Olho no Futuro"',
-    imagem: "images/FolderPetropolis251129.jpg",
+    imagem: "images/FolderPetropolis251129.png",
     descricaoCurta:
       "Cartaz anuncia os Campeonatos Estaduais Absolutos de Xadrez 'Blitz' e 'Rápido', FEXERJ, 19 de outubro de 2025, no Tijuca Tênis Clube, Rio de Janeiro. O 'Blitz' começa às 10h e o 'Rápido' às 14h20. Inscrição a R$ 40,00.\n Mais Informações em www.fexerj.org.br",
     title: "Campeonatos Estaduais Absolutos de Xadrez Blitz e Rápido – 2025",
