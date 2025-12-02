@@ -6,7 +6,7 @@ export interface Evento {
   title?: string;
 }
 
-// alterado em 27/09/2025, 19:14
+// alterado em 02/12/2025, 18:11
 
 export const eventos: Evento[] = [
   {
@@ -16,6 +16,15 @@ export const eventos: Evento[] = [
   },
   {
     id: 1,
+    nome: 'I Torneio "Xadrez de Olho no Futuro"',
+    imagem: "images/FolderPetropolis251129.jpeg",
+    descricaoCurta:
+      "Cartaz anuncia os Campeonatos Estaduais Absolutos de Xadrez 'Blitz' e 'Rápido', FEXERJ, 19 de outubro de 2025, no Tijuca Tênis Clube, Rio de Janeiro. O 'Blitz' começa às 10h e o 'Rápido' às 14h20. Inscrição a R$ 40,00.\n Mais Informações em www.fexerj.org.br",
+    title: "Campeonatos Estaduais Absolutos de Xadrez Blitz e Rápido – 2025",
+  },
+
+  {
+    id: 2,
     nome: "II FIDE/CBX Canoas Shopping",
     imagem: "https://www.instagram.com/p/DOoZgsdAMkf/",
     descricaoCurta:
@@ -23,7 +32,7 @@ export const eventos: Evento[] = [
     title: "Campeonatos Estaduais Absolutos de Xadrez Blitz e Rápido – 2025",
   },
   {
-    id: 2,
+    id: 3,
     nome: "Campeonatos Estaduais Absolutos de Xadrez Blitz e Rápido – 2025",
     imagem:
       "https://fexerj.org.br/wp-content/uploads/2025/09/ESTBLZRAPABS2025_imgdest.jpg",
@@ -32,7 +41,7 @@ export const eventos: Evento[] = [
     title: "Campeonatos Estaduais Absolutos de Xadrez Blitz e Rápido – 2025",
   },
   {
-    id: 3,
+    id: 4,
     nome: "Campeonatos Estaduais Femininos de Xadrez Blitz e Rápido – 2025",
     imagem:
       "https://fexerj.org.br/wp-content/uploads/2025/09/Imagem-do-WhatsApp-de-2025-09-26-as-19.03.53_723fbd77.jpg",
@@ -41,7 +50,7 @@ export const eventos: Evento[] = [
     title: "Campeonatos Estaduais Femininos de Xadrez Blitz e Rápido – 2025",
   },
   {
-    id: 4,
+    id: 5,
     nome: "Campeonato do Interior Absoluto 2025",
     imagem:
       "https://fexerj.org.br/wp-content/uploads/2025/09/interiorfexerj2025-capa.jpg",
@@ -51,7 +60,7 @@ export const eventos: Evento[] = [
   },
 
   {
-    id: 5,
+    id: 6,
     nome: "Copa Brasil para Deficientes Visuais - Regional Centro 2025",
     imagem: "images/FBXDV-RegionalCentro2025.jpg",
     descricaoCurta:
@@ -60,7 +69,7 @@ export const eventos: Evento[] = [
   },
 
   {
-    id: 6,
+    id: 7,
     nome: "Campeonato Carioca Absoluto – 2025",
     imagem:
       "https://fexerj.org.br/wp-content/uploads/2025/09/imagemdestaque-carioca2025.jpg",
