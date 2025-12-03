@@ -206,7 +206,7 @@ function Home() {
         >
           <img
             //src={novembroAzul}
-            src={xadrezOlho}
+            src={novembroAzul}
             alt="Novembro Azul"
             title="'Novembro Azul' - Campanha contra o Câncer de Próstata (é só um 'toque')!"
             tabIndex={0}
