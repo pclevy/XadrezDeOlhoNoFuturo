@@ -145,7 +145,7 @@ function Home() {
       >
         <h3>Nossos Símbolos, nossa História</h3>
         <h5>
-          (Construindo o Futuro ... Xadrez de Olho no Futuro: 03/12/2025, 16:38)
+          (Construindo o Futuro ... Xadrez de Olho no Futuro: 03/12/2025, 16:56)
         </h5>
 
         {/* -- Inicia codigo Contador -- */}
@@ -205,7 +205,8 @@ function Home() {
           }}
         >
           <img
-            src={novembroAzul}
+            //src={novembroAzul}
+            src={xadrezOlho}
             alt="Novembro Azul"
             title="'Novembro Azul' - Campanha contra o Câncer de Próstata (é só um 'toque')!"
             tabIndex={0}
