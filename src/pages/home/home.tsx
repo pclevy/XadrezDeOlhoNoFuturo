@@ -16,9 +16,9 @@ import ImagemZoomHP from "../eventosHistoricos/ImageZoomHP";
 
 import FundoArte from "../../assets/chesgame.jpg";
 
-import novembroAzul from "../../assets/novembroAzul.svg";
+//import novembroAzul from "../../assets/novembroAzul.svg";
 //import novembroAzul from "../../assets/novembroAzul.jpg";
-//import novembroAzul from "../../assets/novembroAzul.png";
+import novembroAzul from "../../assets/novembroAzul.png";
 
 import "./home.css";
 
