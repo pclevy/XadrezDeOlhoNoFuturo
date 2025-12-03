@@ -16,7 +16,7 @@ import ImagemZoomHP from "../eventosHistoricos/ImageZoomHP";
 
 import FundoArte from "../../assets/chesgame.jpg";
 
-import novembroAzul from "../../assets/novembroAzul.png";
+import novembroAzul from "../../assets/novembroAzul.svg";
 
 import "./home.css";
 
@@ -143,7 +143,7 @@ function Home() {
       >
         <h3>Nossos Símbolos, nossa História</h3>
         <h5>
-          (Construindo o Futuro ... Xadrez de Olho no Futuro: 03/12/2025, 03:05)
+          (Construindo o Futuro ... Xadrez de Olho no Futuro: 03/12/2025, 15:44)
         </h5>
 
         {/* -- Inicia codigo Contador -- */}
