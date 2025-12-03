@@ -19,7 +19,7 @@ export const eventos: Evento[] = [
     nome: 'I Torneio "Xadrez de Olho no Futuro"',
     imagem: "images/FolderPetropolis251129.jpg",
     descricaoCurta: "Cartaz anuncia o I Torneio 'Xadrez de Olho no Futuro' ",
-    title: "Troneios Escolares",
+    title: "Torneios Escolares",
   },
 
   {
