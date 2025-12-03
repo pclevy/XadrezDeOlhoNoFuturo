@@ -1,5 +1,5 @@
 // eventosFuturos.ts
-// alterado em 03/12/2025, 19:32
+// alterado em 03/12/2025, 20:36
 
 export interface Evento {
   id: number;
@@ -18,7 +18,8 @@ export const eventos: Evento[] = [
   {
     id: 5,
     nome: 'I Torneio "Xadrez de Olho no Futuro"',
-    imagem: "images/FolderPetropolis251129.jpg",
+    //imagem: "images/FolderPetropolis251129.jpg",
+    imagem: "images/Esquentando_os_Tabuleiros.png",
     descricaoCurta: "Cartaz anuncia o I Torneio 'Xadrez de Olho no Futuro' ",
     title: "Torneios Escolares",
   },
