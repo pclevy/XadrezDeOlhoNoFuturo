@@ -142,7 +142,7 @@ function Home() {
       >
         <h3>Nossos Símbolos, nossa História</h3>
         <h5>
-          (Construindo o Futuro ... Xadrez de Olho no Futuro: 13/11/2025, 21:25)
+          (Construindo o Futuro ... Xadrez de Olho no Futuro: 03/12/2025, 18:52)
         </h5>
 
         {/* -- Inicia codigo Contador -- */}

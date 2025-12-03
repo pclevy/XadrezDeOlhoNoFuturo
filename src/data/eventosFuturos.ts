@@ -1,3 +1,6 @@
+// eventosFuturos.ts
+// alterado em 03/12/2025, 19:32
+
 export interface Evento {
   id: number;
   nome: string;
@@ -5,8 +8,6 @@ export interface Evento {
   descricaoCurta?: string;
   title?: string;
 }
-
-// alterado em 02/12/2025, 18:11
 
 export const eventos: Evento[] = [
   {
@@ -17,7 +18,7 @@ export const eventos: Evento[] = [
   {
     id: 5,
     nome: 'I Torneio "Xadrez de Olho no Futuro"',
-    imagem: "http://xadrez.esfinge.org/images/FolderPetropolis251129.jpg",
+    imagem: "images/FolderPetropolis251129.jpg",
     descricaoCurta: "Cartaz anuncia o I Torneio 'Xadrez de Olho no Futuro' ",
     title: "Torneios Escolares",
   },
@@ -53,7 +54,7 @@ export const eventos: Evento[] = [
   {
     id: 1,
     nome: "Copa Brasil para Deficientes Visuais - Regional Centro 2025",
-    imagem: "images/FBXDV-RegionalCentro2025.jpg",
+    imagem: "images/FBXDV_RegionalCentro2025.jpg",
     descricaoCurta:
       "Informações da Copa Brasil de Xadrez, da FBXDV, para Deficientes Visuais 2025 - Etapa 'Regional Centro', Cuiabá/MT, de a 5 de outubro/2025\n Mais Informações em www.fbxdv.org.br",
     title: "Campeonato do Interior Absoluto 2025",
