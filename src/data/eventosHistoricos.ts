@@ -77,4 +77,11 @@ export const eventos: Evento[] = [
     descricaoCurta: "... Semana da Educacao - (Fictício/exemplo)",
     title: "... Semana da Educacao - (Fictício/exemplo)",
   },
+  {
+    id: 10,
+    nome: "TEste II Torneio de Xadrez Relâmpago da UERJ",
+    imagem: "images/FolderPetropolis251129.jpg",
+    descricaoCurta: "... Semana da Educacao - (Fictício/exemplo)",
+    title: "... Semana da Educacao - (Fictício/exemplo)",
+  },
 ];
