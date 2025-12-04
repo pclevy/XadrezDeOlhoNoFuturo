@@ -154,9 +154,13 @@ function About() {
               <b>Fide ID: 2133890 — Link externo</b>
             </span>
           </a>
+          <br />
+          <span style={{ fontSize: "16px" }}>
+            <b>Email: projetoesfinge97.gmail</b> - <b>Cel: 21 983750952</b>
+          </span>
         </div>
         <br />
-        <br />
+
         {/* Ester A. Lima de Souza */}
         <div tabIndex={0} style={{ paddingBottom: 12 }}>
           <span style={{ fontSize: "20px" }}>
