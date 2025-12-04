@@ -1,5 +1,5 @@
 // home.tsx
-// Alterado em: 12/11/2025, 20:00
+// Alterado em: 13/11/2025, 21:25
 
 //import xadrezOlho from "../../assets/xadrezOlho.png";
 import xadrezOlho from "../../assets/xadrezOlho.svg";
@@ -11,14 +11,12 @@ import SimboloDeficienciaMobilidadeLogo from "../../assets/Simbolo-Deficiencia-M
 import cavaloPretoDirLogo from "../../assets/cavalo-preto-DirLogo.png";
 import peaoAvancado from "../../assets/peaoAvancado.png";
 import Esfinge from "../../assets/esfinge.png";
-//import ImagemZoomHP from "../eventosHistoricos/ImageZoomHP.tsx";
 import ImagemZoomHP from "../eventosHistoricos/ImageZoomHP";
 
 import FundoArte from "../../assets/chesgame.jpg";
 
-//import novembroAzul from "../../assets/novembroAzul.svg";
-//import novembroAzul from "../../assets/novembroAzul.jpg";
-import novembroAzul from "../../assets/novembroAzul.png";
+//import novembroAzul from "../../assets/novembroAzul.png";
+import dezembroLaranja from "../../assets/EuApoioDezembroLaranja.jpg";
 
 import "./home.css";
 
@@ -31,6 +29,8 @@ function Home() {
   const [titHeight, setTitHeight] = useState(0);
   const [containerHeight, setContainerHeight] = useState(0);
   const titRef = useRef<HTMLDivElement>(null);
+
+  const [zoomLaranja, setZoomLaranja] = useState(false);
 
   const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 768);
   // Detecta mudanças no tamanho da tela
@@ -145,7 +145,7 @@ function Home() {
       >
         <h3>Nossos Símbolos, nossa História</h3>
         <h5>
-          (Construindo o Futuro ... Xadrez de Olho no Futuro: 03/12/2025, 16:56)
+          (Construindo o Futuro ... Xadrez de Olho no Futuro: 04/12/2025, 12:34)
         </h5>
 
         {/* -- Inicia codigo Contador -- */}
@@ -191,6 +191,7 @@ function Home() {
           zIndex: 998,
         }}
       >
+        {/* -------- esfinge x laço ---------------------------------- */}
         <div
           style={{
             position: "absolute",
@@ -198,24 +199,77 @@ function Home() {
             top: "0px",
             left: "0px",
             padding: 0,
+
+            alignItems: "left",
+            //gap: "6px",
+
             //border: "1px solid red",
-            lineHeight: 0, // elimina espaçamento interno invisível
+            //lineHeight: 0, // elimina espaçamento interno invisível
             display: "inline-block", // garante que a div tenha o tamanho exato da imagem
-            zIndex: 998,
           }}
         >
-          <img
-            //src={novembroAzul}
-            src={novembroAzul}
-            alt="Novembro Azul"
-            title="'Novembro Azul' - Campanha contra o Câncer de Próstata (é só um 'toque')!"
-            tabIndex={0}
-            className="logo-novembroAzul"
-            style={{
-              backgroundColor: "transparent", // garante transparência no PNG
-            }}
-          />
+          {/*<span className="tooltip-anchor" style={{ zIndex: 1 }}> */}
+
+          <span className="tooltip-anchor" style={{ zIndex: 1 }}>
+            <span>
+              <img
+                src={dezembroLaranja}
+                className="logo-campanhaMensal"
+                tabIndex={0}
+                alt="Ícone dezembroLaranja"
+                title="Dezembro Laranja - Campanha contra o Câncer de Pele!"
+                onClick={() => setZoomLaranja(!zoomLaranja)}
+                style={{
+                  width: "auto",
+                  cursor: "pointer",
+                  backgroundColor: "transparent",
+
+                  /* 🔥 animação suave */
+                  transition: "transform 0.35s ease",
+
+                  /* 🔥 zoom sem afetar tooltip, mantendo posição */
+                  transform: zoomLaranja ? "scale(4.0)" : "scale(1)",
+
+                  transformOrigin: "top left", // Mantém left=1, top=1 ao ampliar
+
+                  position: "relative", // Mantém tooltip no mesmo fluxo
+                  left: "8px",
+                  top: "8px",
+                }}
+
+                /*
+                style={{
+                  width: "auto",
+                  cursor: "pointer",
+                  backgroundColor: "transparent",
+                  transition: "transform 0.3s ease",
+                  transform: zoomLaranja ? "scale(2.0)" : "scale(1)",
+                  zIndex: 9999,
+                  position: zoomLaranja ? "relative" : "static",
+                }}
+
+ */
+              />
+
+              <div className="tooltip at_side" style={{ height: "auto" }}>
+                <div className="tooltip-content">
+                  "Dezembro Laranja" - Campanha contra o Câncer de Pele!
+                </div>
+              </div>
+            </span>
+          </span>
+
+          <span tabIndex={0}> {/* // agora entra no fluxo do Tab> */}</span>
         </div>
+
+        <div
+          style={{
+            display: "inline-flex",
+            alignItems: "center",
+            //gap: "6px",
+          }}
+        ></div>
+        {/* ---------------------------------------------- */}
 
         <div>
           <img
@@ -295,7 +349,7 @@ function Home() {
           E vem aí a nova versão do antigo <i>site </i>
           <span className="tooltip-anchor">
             <span>"Xadrez UERJ"</span>
-            <div className="tooltip">
+            <div className="tooltip right">
               <div className="tooltip-content">
                 XadrezUERJ esteve hospedado na UERJ, em 1997-2004 e 2010-2013!
               </div>

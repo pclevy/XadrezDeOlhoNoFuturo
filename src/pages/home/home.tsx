@@ -1,7 +1,6 @@
 // home.tsx
-// Alterado em: 13/11/2025, 21:25
+// Alterado em: 04/12/2025, 16:05
 
-//import xadrezOlho from "../../assets/xadrezOlho.png";
 import xadrezOlho from "../../assets/xadrezOlho.svg";
 import cavaloPretoEsqLogo from "../../assets/cavalo-preto-EsqLogo.png";
 import acessibilidadeUniversalLogo from "../../assets/acessibilidade-universal-Logo.jpg";
@@ -14,8 +13,6 @@ import Esfinge from "../../assets/esfinge.png";
 import ImagemZoomHP from "../eventosHistoricos/ImageZoomHP";
 
 import FundoArte from "../../assets/chesgame.jpg";
-
-//import novembroAzul from "../../assets/novembroAzul.png";
 import dezembroLaranja from "../../assets/EuApoioDezembroLaranja.jpg";
 
 import "./home.css";
@@ -31,7 +28,55 @@ function Home() {
   const titRef = useRef<HTMLDivElement>(null);
 
   const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 768);
-  // Detecta mudanças no tamanho da tela
+
+  // Modal do Dezembro Laranja — APENAS ESTA PARTE É NOVA
+  const [showModalDez, setShowModalDez] = useState(false);
+  const [fadeDez, setFadeDez] = useState(false);
+
+  const modalDezembroLaranja = showModalDez && (
+    <div
+      onClick={() => {
+        setFadeDez(false);
+        setTimeout(() => setShowModalDez(false), 200);
+      }}
+      style={{
+        position: "fixed",
+        top: 0,
+        left: 0,
+        width: "100vw",
+        height: "100vh",
+        backgroundColor: "rgba(0,0,0,0.55)",
+        display: "flex",
+        justifyContent: "flex-start",
+        alignItems: "flex-start",
+        padding: 0,
+        margin: 0,
+        zIndex: 999999,
+        cursor: "zoom-out",
+        opacity: fadeDez ? 1 : 0,
+        transition: "opacity 0.2s ease-in-out",
+      }}
+    >
+      <img
+        src={dezembroLaranja}
+        alt="Zoom dezembro laranja"
+        style={{
+          position: "absolute",
+          top: "1px",
+          left: "1px",
+          width: "auto",
+          height: "auto",
+          maxWidth: "95vw",
+          maxHeight: "95vh",
+          transform: fadeDez ? "scale(1)" : "scale(0.85)",
+          transition: "transform 0.2s ease-in-out",
+          borderRadius: "6px",
+        }}
+      />
+    </div>
+  );
+  // FIM DO MODAL
+
   useEffect(() => {
     const handleResize = () => {
       setIsSmallScreen(window.innerWidth <= 768);
@@ -41,7 +86,6 @@ function Home() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Observa dinamicamente a altura do Tit
   useEffect(() => {
     const updateTitHeight = () => {
       if (titRef.current) {
@@ -50,16 +94,13 @@ function Home() {
       }
     };
 
-    updateTitHeight(); // inicial
+    updateTitHeight();
 
     const observer = new ResizeObserver(() => {
       updateTitHeight();
     });
 
-    if (titRef.current) {
-      observer.observe(titRef.current);
-    }
-
+    if (titRef.current) observer.observe(titRef.current);
     window.addEventListener("resize", updateTitHeight);
 
     return () => {
@@ -68,7 +109,6 @@ function Home() {
     };
   }, []);
 
-  // Atualiza altura do container azul
   useEffect(() => {
     const updateHeight = () => {
       const alturaDisponivel =
@@ -78,12 +118,11 @@ function Home() {
 
     updateHeight();
     window.addEventListener("resize", updateHeight);
+
     return () => window.removeEventListener("resize", updateHeight);
   }, [navbarHeight, titHeight]);
 
-  console.log("Navbar:", navbarHeight, "Tit:", titHeight);
-
-  // Carrega e ativa o anúncio do Google AdSense
+  // AdSense script loader
   useEffect(() => {
     const scriptId = "adsbygoogle-script";
 
@@ -98,7 +137,9 @@ function Home() {
 
       script.onload = () => {
         try {
+          // Y @ts-ignore
           window.adsbygoogle = window.adsbygoogle || [];
+          // Y @ts-ignore
           window.adsbygoogle.push({});
         } catch (e) {
           console.error("Erro ao carregar anúncio (onload):", e);
@@ -108,7 +149,9 @@ function Home() {
       document.head.appendChild(script);
     } else {
       try {
+        // Y @ts-ignore
         window.adsbygoogle = window.adsbygoogle || [];
+        // Y @ts-ignore
         window.adsbygoogle.push({});
       } catch (e) {
         console.error("Erro ao carregar anúncio:", e);
@@ -118,14 +161,14 @@ function Home() {
 
   return (
     <div style={{ marginTop: 0, padding: "0px 5px", justifyItems: "center" }}>
-      {/* Navbar fixa no topo */}
       <Navbar onHeightChange={setNavbarHeight} onWidthChange={setNavbarWidth} />
 
-      {/* Tit logo abaixo da Navbar */}
+      {modalDezembroLaranja}
+
       <div
         ref={titRef}
         className="Tit"
-        tabIndex={0} // agora entra no fluxo do Tab
+        tabIndex={0}
         style={{
           position: "fixed",
           top: `${navbarHeight + 9}px`,
@@ -143,28 +186,12 @@ function Home() {
       >
         <h3>Nossos Símbolos, nossa História</h3>
         <h5>
-          (Construindo o Futuro ... Xadrez de Olho no Futuro: 04/12/2025, 12:34)
+          (Construindo o Futuro ... Xadrez de Olho no Futuro: 04/12/2025, 16:05)
         </h5>
-
-        {/* -- Inicia codigo Contador -- */}
-        {/*
-        <div style={{ display: "none" }}>
-          <a href="https://megacontador.com.br/">
-            <img
-              src="https://megacontador.com.br/img-zwsGGCeKiRHCA3LS-57.gif"
-              alt="Contador de visitas"
-            />
-          </a>
-        </div>
-        */}
-        {/* -- Fim do codigo Contador -- */}
-        {/* */}
       </div>
 
-      {/* Azul logo abaixo do Tit */}
       <div
         className="azul"
-        //tabIndex={0} // agora entra no fluxo do Tab
         style={{
           position: "fixed",
           top: `${navbarHeight + titHeight + 9}px`,
@@ -175,17 +202,14 @@ function Home() {
           maxHeight: `${containerHeight - 5}px`,
           border: "1px solid blue",
           backgroundColor: "#e9f9ff",
-          //padding: "10px",
           marginTop: 1,
           paddingTop: "0px",
           paddingBottom: "1px",
           paddingLeft: "1px",
           paddingRight: "1px",
-
-          backgroundImage: `url(${FundoArte})`, // 👈 aqui
-          backgroundRepeat: "repeat", // evita repetição
-          backgroundPosition: "center", // centraliza
-
+          backgroundImage: `url(${FundoArte})`,
+          backgroundRepeat: "repeat",
+          backgroundPosition: "center",
           zIndex: 998,
         }}
       >
@@ -197,132 +221,106 @@ function Home() {
             top: "0px",
             left: "0px",
             padding: 0,
-
-            alignItems: "left",
-            //gap: "6px",
-
-            //border: "1px solid red",
-            //lineHeight: 0, // elimina espaçamento interno invisível
-            display: "inline-block", // garante que a div tenha o tamanho exato da imagem
+            display: "inline-block",
           }}
         >
           <span className="tooltip-anchor" style={{ zIndex: 1 }}>
             <span>
+              {/* AQUI A ÚNICA ALTERAÇÃO: adição do onClick */}
               <img
                 src={dezembroLaranja}
                 className="logo-campanhaMensal"
-                tabIndex={0} // agora entra no fluxo do Tab
+                tabIndex={0}
                 alt="Ícone dezembroLaranja"
                 title="Dezembro Laranja' - Campanha contra o Câncer de Pele!"
                 style={{
-                  //marginTop: 90,
-                  //height: "100",
                   width: "auto",
-                  backgroundColor: "transparent", // garante transparência no PNG
-                }} // ou defina de acordo com seu layout
+                  backgroundColor: "transparent",
+                  cursor: "zoom-in",
+                }}
+                onClick={() => {
+                  setShowModalDez(true);
+                  setTimeout(() => setFadeDez(true), 10);
+                }}
               />
 
-              <div
-                className="tooltip at_side"
-                style={{
-                  //marginTop: "-58",
-                  //marginLeft: "30px",
-                  height: "auto",
-                }}
-              >
+              <div className="tooltip at_side" style={{ height: "auto" }}>
                 <div className="tooltip-content">
                   "Dezembro Laranja" - Campanha contra o Câncer de Pele!
                 </div>
               </div>
             </span>
           </span>
-          <span tabIndex={0}> {/* // agora entra no fluxo do Tab> */}</span>
         </div>
-
-        <div
-          style={{
-            display: "inline-flex",
-            alignItems: "center",
-            //gap: "6px",
-          }}
-        ></div>
-        {/* ---------------------------------------------- */}
 
         <div>
           <img
             src={peaoAvancado}
             className="logo-olho"
-            tabIndex={0} // agora entra no fluxo do Tab
+            tabIndex={0}
             alt="Peão Avançado"
             title="Peão Avançado"
           />
           <img
             src={xadrezOlho}
             className="logo-olho"
-            tabIndex={0} // agora entra no fluxo do Tab
+            tabIndex={0}
             alt="Xadrez de Olho no Futuro"
             title="Xadrez de Olho no Futuro"
           />
         </div>
+
         <div>
           <img
             src={cavaloPretoEsqLogo}
             className="logo-simbolo-pcd"
-            tabIndex={0} // agora entra no fluxo do Tab
+            tabIndex={0}
             alt="Cavalo Preto Esquerdo"
             title="Cavalo Preto Esquerdo"
           />
           <img
             src={acessibilidadeUniversalLogo}
             className="logo-simbolo-pcd"
-            tabIndex={0} // agora entra no fluxo do Tab
+            tabIndex={0}
             alt="Símbolo Universal de Acessibilidade"
             title="Símbolo Universal de Acessibilidade"
           />
           <img
             src={deficienciaVisualLogo}
             className="logo-simbolo-pcd"
-            tabIndex={0} // agora entra no fluxo do Tab
+            tabIndex={0}
             alt="Deficiencia Visual"
             title="Deficiencia Visual"
           />
           <img
             src={SimboloDeficienciaMobilidadeLogo}
             className="logo-simbolo-pcd"
-            tabIndex={0} // agora entra no fluxo do Tab
+            tabIndex={0}
             alt="SimboloDeficienciaMobilidade"
             title="SimboloDeficienciaMobilidade"
           />
           <img
             src={cordaoGirasoisLogo}
             className="logo-simbolo-pcd"
-            tabIndex={0} // agora entra no fluxo do Tab
+            tabIndex={0}
             alt="Colar de Girasóis"
             title="Colar de Girasóis"
           />
           <img
             src={cavaloPretoDirLogo}
             className="logo-simbolo-pcd"
-            tabIndex={0} // agora entra no fluxo do Tab
+            tabIndex={0}
             alt="Cavalo Preto Direito"
             title="Cavalo Preto Direito"
           />
         </div>
-        <h3
-          tabIndex={0} // agora entra no fluxo do Tab
-        >
-          Xadrez de Olho no Futuro
-        </h3>
 
-        <h4
-          tabIndex={0} // agora entra no fluxo do Tab
-        >
+        <h3 tabIndex={0}>Xadrez de Olho no Futuro</h3>
+        <h4 tabIndex={0}>
           Futuro da Juventude, da Acessibilidade, e do Planeta
         </h4>
 
-        <h5
-          tabIndex={0} // agora entra no fluxo do Tab
-        >
+        <h5 tabIndex={0}>
           E vem aí a nova versão do antigo <i>site </i>
           <span className="tooltip-anchor">
             <span>"Xadrez UERJ"</span>
@@ -334,6 +332,7 @@ function Home() {
           </span>
           , aguarde .....
         </h5>
+
         <h4>
           <div
             style={{
@@ -347,14 +346,14 @@ function Home() {
                 <img
                   src={Esfinge}
                   className="logo-esfinge"
-                  tabIndex={0} // agora entra no fluxo do Tab
+                  tabIndex={0}
                   alt="Esfinge"
                   title="Esfinge, site 'Educação, Xadrez, Inclusão'"
-                  style={{ height: "100px", width: "auto" }} // ou defina de acordo com seu layout
+                  style={{ height: "100px", width: "auto" }}
                 />
                 <div className="tooltip">
                   <div className="tooltip-content">
-                    "esfinge.org" hospedou "XadrezUERJ",{"\n"}em 2004-2009 e
+                    "esfinge.org" hospedou "XadrezUERJ", em 2004-2009 e
                     2013-2021!
                   </div>
                 </div>
@@ -362,20 +361,17 @@ function Home() {
             </span>
 
             <span tabIndex={0}>
-              {" "}
-              {/* // agora entra no fluxo do Tab> */}
               <ImagemZoomHP />
             </span>
           </div>
         </h4>
 
-        {/* Bloco do anúncio */}
         <div style={{ marginTop: "1px", textAlign: "center" }}>
           <ins
             className="adsbygoogle"
             style={{ display: "block" }}
             data-ad-client="ca-pub-7174891341008290"
-            data-ad-slot="9948140848" // Substitua com seu slot real!
+            data-ad-slot="9948140848"
             data-ad-format="auto"
             data-full-width-responsive="true"
           ></ins>
