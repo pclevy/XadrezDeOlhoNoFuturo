@@ -156,7 +156,12 @@ function About() {
           </a>
           <br />
           <span style={{ fontSize: "16px" }}>
-            <b>Email: projetoesfinge97.gmail</b> - <b>Cel: 21 983750952</b>
+            <b>
+              Email:{" "}
+              <a href="mailto:projetoesfinge97.gmail">projetoesfinge97.gmail</a>
+            </b>{" "}
+            &nbsp; - &nbsp;
+            <b>Cel: 21 983750952</b>
           </span>
         </div>
         <br />
