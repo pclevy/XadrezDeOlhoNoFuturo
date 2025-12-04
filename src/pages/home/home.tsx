@@ -15,7 +15,8 @@ import ImagemZoomHP from "../eventosHistoricos/ImageZoomHP";
 
 import FundoArte from "../../assets/chesgame.jpg";
 
-import novembroAzul from "../../assets/novembroAzul.png";
+//import novembroAzul from "../../assets/novembroAzul.png";
+import dezembroLaranja from "../../assets/EuApoioDezembroLaranja.jpg";
 
 import "./home.css";
 
@@ -142,7 +143,7 @@ function Home() {
       >
         <h3>Nossos Símbolos, nossa História</h3>
         <h5>
-          (Construindo o Futuro ... Xadrez de Olho no Futuro: 03/12/2025, 18:52)
+          (Construindo o Futuro ... Xadrez de Olho no Futuro: 04/12/2025, 12:34)
         </h5>
 
         {/* -- Inicia codigo Contador -- */}
@@ -208,11 +209,11 @@ function Home() {
           <span className="tooltip-anchor" style={{ zIndex: 1 }}>
             <span>
               <img
-                src={novembroAzul}
-                className="logo-novembroAzul"
+                src={dezembroLaranja}
+                className="logo-campanhaMensal"
                 tabIndex={0} // agora entra no fluxo do Tab
-                alt="Ícone NovembroAzul"
-                title="Novembro Azul' - Campanha contra o Câncer de Próstata (é só um 'toque')!"
+                alt="Ícone dezembroLaranja"
+                title="Dezembro Laranja' - Campanha contra o Câncer de Pele!"
                 style={{
                   //marginTop: 90,
                   //height: "100",
@@ -230,8 +231,7 @@ function Home() {
                 }}
               >
                 <div className="tooltip-content">
-                  "Novembro Azul" - Campanha contra o Câncer de Próstata (é só
-                  um 'toque')!
+                  "Dezembro Laranja" - Campanha contra o Câncer de Pele!
                 </div>
               </div>
             </span>
