@@ -1,5 +1,5 @@
 //Atualidades.tsx
-//2025/12/09, 12:47
+//2025/12/09, 12:58
 import { useState, useRef, useEffect } from "react";
 import Navbar from "../../components/Navbar";
 
@@ -18,7 +18,7 @@ import FotoEscada from "../../assets/XadrezOlhoFuturo/FotoEscada_2025_11_29.jpeg
 import Campeao_VitorMartins_2025_11_29 from "../../assets/XadrezOlhoFuturo/Campeao_VitorMartins_2025_11_29.jpeg";
 import CampeaFem_SophiaDomingos_2025_11_29 from "../../assets/XadrezOlhoFuturo/CampeaFem_2025_11_29.jpeg";
 import Equipe_2025_11_29 from "../../assets/XadrezOlhoFuturo/Equipe_2025_11_29.jpeg";
-import Ultimoachegar_2025_11_29 from "../../assets/XadrezOlhoFuturo/Ultimoachegar_2025_11_29.jpeg";
+import LuizOtavio_2025_11_29 from "../../assets/XadrezOlhoFuturo/LuizOtavio_2025_11_29.jpeg";
 
 import CopaBrasil2025_2 from "../../assets/FBXDV/CopaBrasilSudeste2025_2.jpg";
 import CopaBrasil2025_Enzo from "../../assets/FBXDV/Enzo_250817.jpg";
@@ -173,7 +173,7 @@ function Atualidades() {
         }}
       >
         <h3 tabIndex={0}>Atualidades</h3>
-        <h5 tabIndex={0}>(em construção ... 09/12/2025, 12:47)</h5>
+        <h5 tabIndex={0}>(em construção ... 09/12/2025, 12:58)</h5>
       </div>
 
       <div
@@ -297,14 +297,14 @@ function Atualidades() {
             <Zoom>
               <img
                 tabIndex={0}
-                src={Ultimoachegar_2025_11_29}
+                src={LuizOtavio_2025_11_29}
                 className="video-class"
-                alt="Foto da Último participante a chegar, 29/11/2025, DAU/Esdi/UERJ"
-                title="Foto da Último participante a chegar, 29/11/2025, DAU/Esdi/UERJ"
+                alt="Foto de Luiz Otávio, 29/11/2025, DAU/Esdi/UERJ"
+                title="Foto de Luiz Otávio, 29/11/2025, DAU/Esdi/UERJ"
               />
             </Zoom>
             <figcaption style={FIGCAPTION_STYLE}>
-              {"Foto da Último participante a chegar!"}
+              {"Foto de Luiz Otávio!"}
             </figcaption>
           </figure>
         </div>
