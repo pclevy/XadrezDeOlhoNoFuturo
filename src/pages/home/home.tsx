@@ -14,6 +14,7 @@ import ImagemZoomHP from "../eventosHistoricos/ImageZoomHP";
 
 import FundoArte from "../../assets/chesgame.jpg";
 import dezembroLaranja from "../../assets/EuApoioDezembroLaranja.jpg";
+//import dezembroLaranja from "../../assets/EuApoioDezembroLaranja.png";
 
 import "./home.css";
 

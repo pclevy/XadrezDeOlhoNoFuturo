@@ -1,3 +1,5 @@
+//Atualidades.tsx
+//2025/12/09, 12:47
 import { useState, useRef, useEffect } from "react";
 import Navbar from "../../components/Navbar";
 
@@ -11,11 +13,17 @@ import LeandroQueiros from "../../assets/LeandroQueiros.jpg";
 import AntonioFrancisco from "../../assets/AntonioFrancisco.jpg";
 import Euzebio from "../../assets/Euzebio.jpg";
 
-import CopaBrasil2025_1 from "../../assets/CopaBrasilSudeste2025_1.jpg";
-import CopaBrasil2025_2 from "../../assets/CopaBrasilSudeste2025_2.jpg";
-import CopaBrasil2025_Enzo from "../../assets/Enzo_250817.jpg";
-import CopaBrasil2025Videos_1 from "../../assets/FBXDV_1.mp4";
-import MuriloXLeandro from "../../assets/MuriloXLeandro.mp4";
+import I_XadrezOlhoFuturo from "../../assets/XadrezOlhoFuturo/FolderPetropolis251129.jpg";
+import FotoEscada from "../../assets/XadrezOlhoFuturo/FotoEscada_2025_11_29.jpeg";
+import Campeao_VitorMartins_2025_11_29 from "../../assets/XadrezOlhoFuturo/Campeao_VitorMartins_2025_11_29.jpeg";
+import CampeaFem_SophiaDomingos_2025_11_29 from "../../assets/XadrezOlhoFuturo/CampeaFem_2025_11_29.jpeg";
+import Equipe_2025_11_29 from "../../assets/XadrezOlhoFuturo/Equipe_2025_11_29.jpeg";
+import Ultimoachegar_2025_11_29 from "../../assets/XadrezOlhoFuturo/Ultimoachegar_2025_11_29.jpeg";
+
+import CopaBrasil2025_2 from "../../assets/FBXDV/CopaBrasilSudeste2025_2.jpg";
+import CopaBrasil2025_Enzo from "../../assets/FBXDV/Enzo_250817.jpg";
+import CopaBrasil2025Videos_1 from "../../assets/FBXDV/FBXDV_1.mp4";
+import MuriloXLeandro from "../../assets/FBXDV/MuriloXLeandro.mp4";
 
 // Modal de vídeo (igual ao anterior)
 function VideoModal({
@@ -165,7 +173,7 @@ function Atualidades() {
         }}
       >
         <h3 tabIndex={0}>Atualidades</h3>
-        <h5 tabIndex={0}>(em construção ... 23/10/2025, 21:54)</h5>
+        <h5 tabIndex={0}>(em construção ... 09/12/2025, 12:47)</h5>
       </div>
 
       <div
@@ -195,9 +203,9 @@ function Atualidades() {
           zIndex: 998,
         }}
       >
-        <h3 tabIndex={0}>FBXDV - Copa Brasil 2025</h3>
+        <h3 tabIndex={0}>I Torneio Xadrez de Olho no Futuro</h3>
         <h5 tabIndex={0}>
-          15 a 17 de agosto de 2025 - Hotel Victory Business - Juiz de Fora / MG
+          29 de novembro de 2025 - DAU/Esdi/UERJ - Petrópolis / RJ
         </h5>
 
         <h4>Fotos e Vídeos:</h4>
@@ -217,16 +225,110 @@ function Atualidades() {
             <Zoom>
               <img
                 tabIndex={0}
-                src={CopaBrasil2025_1}
+                src={I_XadrezOlhoFuturo}
                 className="video-class"
-                alt="FBXDV-Copa Brasil, Sudeste, 2025"
-                title="FBXDV-Copa Brasil, Sudeste, 2025"
+                alt="I Torneio 'Xadrez de Olho no Futuro'"
+                title="I Torneio 'Xadrez de Olho no Futuro'"
               />
             </Zoom>
             <figcaption style={FIGCAPTION_STYLE}>
-              {"Copa Brasil 2025\nEtapa Sudeste"}
+              {"Projet Esphinge 2025\nUERJ/Petrópolis"}
             </figcaption>
           </figure>
+          <figure style={FIGURE_STYLE}>
+            <Zoom>
+              <img
+                tabIndex={0}
+                src={FotoEscada}
+                className="video-class"
+                alt="Foto da Escada, 29-11-2025, DAU/Esdi/UERJ"
+                title="Foto da Escada, 29-11-2025, DAU/Esdi/UERJ"
+              />
+            </Zoom>
+            <figcaption style={FIGCAPTION_STYLE}>{"Foto da Escada"}</figcaption>
+          </figure>
+
+          <figure style={FIGURE_STYLE}>
+            <Zoom>
+              <img
+                tabIndex={0}
+                src={Campeao_VitorMartins_2025_11_29}
+                className="video-class"
+                alt="Campeão, 29-11-2025, DAU/Esdi/UERJ"
+                title="Campeão, 29-11-2025, DAU/Esdi/UERJ"
+              />
+            </Zoom>
+            <figcaption style={FIGCAPTION_STYLE}>
+              {"Campeão: Vitor Martins"}
+            </figcaption>
+          </figure>
+
+          <figure style={FIGURE_STYLE}>
+            <Zoom>
+              <img
+                tabIndex={0}
+                src={CampeaFem_SophiaDomingos_2025_11_29}
+                className="video-class"
+                alt="Campeã Feminina, 29-11-2025, DAU/Esdi/UERJ"
+                title="Campeã Feminina, 29-11-2025, DAU/Esdi/UERJ"
+              />
+            </Zoom>
+            <figcaption style={FIGCAPTION_STYLE}>
+              {"Campeã Feminina: Sophia Domingos"}
+            </figcaption>
+          </figure>
+
+          <figure style={FIGURE_STYLE}>
+            <Zoom>
+              <img
+                tabIndex={0}
+                src={Equipe_2025_11_29}
+                className="video-class"
+                alt="Foto da Equipe Esfinge_29_11_2025, DAU/Esdi/UERJ"
+                title="Foto da Equipe Esfinge_29_11_2025, DAU/Esdi/UERJ"
+              />
+            </Zoom>
+            <figcaption style={FIGCAPTION_STYLE}>
+              {"Foto da Equipe Esfinge_"}
+            </figcaption>
+          </figure>
+
+          <figure style={FIGURE_STYLE}>
+            <Zoom>
+              <img
+                tabIndex={0}
+                src={Ultimoachegar_2025_11_29}
+                className="video-class"
+                alt="Foto da Último participante a chegar, 29/11/2025, DAU/Esdi/UERJ"
+                title="Foto da Último participante a chegar, 29/11/2025, DAU/Esdi/UERJ"
+              />
+            </Zoom>
+            <figcaption style={FIGCAPTION_STYLE}>
+              {"Foto da Último participante a chegar!"}
+            </figcaption>
+          </figure>
+        </div>
+
+        <hr style={{ padding: 0, marginTop: 0, marginBottom: 0 }} />
+
+        <h3 tabIndex={0}>FBXDV - Copa Brasil 2025</h3>
+        <h5 tabIndex={0}>
+          15 a 17 de agosto de 2025 - Hotel Victory Business - Juiz de Fora / MG
+        </h5>
+
+        <h4>Fotos e Vídeos:</h4>
+        <div
+          style={{
+            display: "flex",
+            flexWrap: "wrap",
+            alignItems: "flex-start", // alinhamento vertical pelo topo
+            alignContent: "flex-start", // múltiplas linhas sobem para o topo
+            justifyContent: "center", // <<< centraliza horizontalmente
+            marginTop: 0,
+            marginBottom: 0,
+            padding: 0,
+          }}
+        >
           <figure style={FIGURE_STYLE}>
             <Zoom>
               <img
