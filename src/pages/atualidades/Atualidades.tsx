@@ -1,5 +1,5 @@
-//Atualidades.tsx
-//2025/12/09, 12:58
+// Atualidades.tsx
+// 2025/12/09, 16:13
 import { useState, useRef, useEffect } from "react";
 import Navbar from "../../components/Navbar";
 
@@ -19,6 +19,7 @@ import Campeao_VitorMartins_2025_11_29 from "../../assets/XadrezOlhoFuturo/Campe
 import CampeaFem_SophiaDomingos_2025_11_29 from "../../assets/XadrezOlhoFuturo/CampeaFem_2025_11_29.jpeg";
 import Equipe_2025_11_29 from "../../assets/XadrezOlhoFuturo/Equipe_2025_11_29.jpeg";
 import LuizOtavio_2025_11_29 from "../../assets/XadrezOlhoFuturo/LuizOtavio_2025_11_29.jpeg";
+import SorteioCanecaIFHT from "../../assets/XadrezOlhoFuturo/SorteioCanecaIFHT_2025-11-29.mp4";
 
 import CopaBrasil2025_2 from "../../assets/FBXDV/CopaBrasilSudeste2025_2.jpg";
 import CopaBrasil2025_Enzo from "../../assets/FBXDV/Enzo_250817.jpg";
@@ -173,7 +174,7 @@ function Atualidades() {
         }}
       >
         <h3 tabIndex={0}>Atualidades</h3>
-        <h5 tabIndex={0}>(em construção ... 09/12/2025, 12:58)</h5>
+        <h5 tabIndex={0}>(em construção ... 09/12/2025, 16:13)</h5>
       </div>
 
       <div
@@ -247,7 +248,6 @@ function Atualidades() {
             </Zoom>
             <figcaption style={FIGCAPTION_STYLE}>{"Foto da Escada"}</figcaption>
           </figure>
-
           <figure style={FIGURE_STYLE}>
             <Zoom>
               <img
@@ -262,7 +262,6 @@ function Atualidades() {
               {"Campeão: Vitor Martins"}
             </figcaption>
           </figure>
-
           <figure style={FIGURE_STYLE}>
             <Zoom>
               <img
@@ -277,7 +276,6 @@ function Atualidades() {
               {"Campeã Feminina: Sophia Domingos"}
             </figcaption>
           </figure>
-
           <figure style={FIGURE_STYLE}>
             <Zoom>
               <img
@@ -292,7 +290,6 @@ function Atualidades() {
               {"Foto da Equipe Esfinge_"}
             </figcaption>
           </figure>
-
           <figure style={FIGURE_STYLE}>
             <Zoom>
               <img
@@ -305,6 +302,29 @@ function Atualidades() {
             </Zoom>
             <figcaption style={FIGCAPTION_STYLE}>
               {"Foto de Luiz Otávio!"}
+            </figcaption>
+          </figure>
+
+          <figure
+            style={{ ...FIGURE_STYLE, cursor: "pointer", maxWidth: "320px" }}
+            onClick={() => setVideoSrc(SorteioCanecaIFHT)}
+          >
+            <video
+              tabIndex={0}
+              src={SorteioCanecaIFHT}
+              className="video-class"
+              title="Vídeo do Sorteio da Caneca IFHT, entre a Equipe de Organização"
+              aria-label="Vídeo do Sorteio da Caneca IFHT, entre a Equipe de Organização"
+              controls
+              //width="135px"
+              //width="auto"
+              height="auto"
+              style={{
+                border: "0px solid blue",
+              }}
+            />
+            <figcaption style={FIGCAPTION_STYLE}>
+              {"Sorteio da Caneca IFHT"}
             </figcaption>
           </figure>
         </div>
