@@ -1,5 +1,7 @@
 // eventosFuturos.ts
-// alterado em 03/12/2025, 20:36
+// alterado em 10/12/2025, 21:22
+
+//import I_XadrezOlhoFuturo from "../../assets/XadrezOlhoFuturo/FolderPetropolis251129.jpg";
 
 export interface Evento {
   id: number;
@@ -19,6 +21,9 @@ export const eventos: Evento[] = [
     id: 5,
     nome: 'I Torneio "Xadrez de Olho no Futuro"',
     imagem: "images/FolderPetropolis251129.jpg",
+    //import I_XadrezOlhoFuturo from "../../assets/XadrezOlhoFuturo/FolderPetropolis251129.jpg";
+
+    //imagem: {I_XadrezOlhoFuturo},
     descricaoCurta: "Cartaz anuncia o I Torneio 'Xadrez de Olho no Futuro' ",
     title: "Torneios Escolares Petrópolis",
   },

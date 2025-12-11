@@ -1,5 +1,5 @@
-// Atualidades.tsx
-// 2025/12/09, 16:13
+// Atualidades.tsx ***
+// 2025/12/10, 21:22 ***
 import { useState, useRef, useEffect } from "react";
 import Navbar from "../../components/Navbar";
 
@@ -14,6 +14,8 @@ import AntonioFrancisco from "../../assets/AntonioFrancisco.jpg";
 import Euzebio from "../../assets/Euzebio.jpg";
 
 import I_XadrezOlhoFuturo from "../../assets/XadrezOlhoFuturo/FolderPetropolis251129.jpg";
+//import I_XadrezOlhoFuturo from "images/FolderPetropolis251129.jpg";
+
 import FotoEscada from "../../assets/XadrezOlhoFuturo/FotoEscada_2025_11_29.jpeg";
 import Campeao_VitorMartins_2025_11_29 from "../../assets/XadrezOlhoFuturo/Campeao_VitorMartins_2025_11_29.jpeg";
 import CampeaFem_SophiaDomingos_2025_11_29 from "../../assets/XadrezOlhoFuturo/CampeaFem_2025_11_29.jpeg";
@@ -95,14 +97,15 @@ function Atualidades() {
   // estilos reutilizáveis
   const FIGURE_STYLE: React.CSSProperties = {
     textAlign: "center",
-    maxWidth: "250px",
-    margin: "0 20px 20px 0", // margem horizontal fixa (20px)
+    maxWidth: "auto", // - Alterado: 250px para 'auto' - Levy 2025/12/09
+    margin: "0 2px 2px 0", // margem horizontal fixa (20px) - Alterado Levy 2025/12/09
     cursor: "default",
   };
 
   const FIGCAPTION_STYLE: React.CSSProperties = {
-    marginTop: "6px",
+    marginTop: "1px",
     fontSize: "0.9em",
+    fontWeight: "bold",
     // 2 = preserva quebras via \n; 3 = permite quebra automática de palavras se necessário
     whiteSpace: "pre-line",
     overflowWrap: "break-word",
@@ -174,7 +177,7 @@ function Atualidades() {
         }}
       >
         <h3 tabIndex={0}>Atualidades</h3>
-        <h5 tabIndex={0}>(em construção ... 09/12/2025, 16:13)</h5>
+        <h5 tabIndex={0}>(em construção ... 10/12/2025, 21:22)</h5>
       </div>
 
       <div
@@ -244,10 +247,12 @@ function Atualidades() {
                 className="video-class"
                 alt="Foto da Escada, 29-11-2025, DAU/Esdi/UERJ"
                 title="Foto da Escada, 29-11-2025, DAU/Esdi/UERJ"
+                //style={{ paddingLeft: "9px", paddingRight: "9px" }}
               />
             </Zoom>
             <figcaption style={FIGCAPTION_STYLE}>{"Foto da Escada"}</figcaption>
           </figure>
+          {"  "}
           <figure style={FIGURE_STYLE}>
             <Zoom>
               <img
@@ -256,6 +261,7 @@ function Atualidades() {
                 className="video-class"
                 alt="Campeão, 29-11-2025, DAU/Esdi/UERJ"
                 title="Campeão, 29-11-2025, DAU/Esdi/UERJ"
+                //style={{ paddingLeft: "9px", paddingRight: "9px" }}
               />
             </Zoom>
             <figcaption style={FIGCAPTION_STYLE}>
@@ -273,7 +279,7 @@ function Atualidades() {
               />
             </Zoom>
             <figcaption style={FIGCAPTION_STYLE}>
-              {"Campeã Feminina: Sophia Domingos"}
+              {"Campeã Feminina:\nSophia Domingos"}
             </figcaption>
           </figure>
           <figure style={FIGURE_STYLE}>
@@ -287,7 +293,7 @@ function Atualidades() {
               />
             </Zoom>
             <figcaption style={FIGCAPTION_STYLE}>
-              {"Foto da Equipe Esfinge_"}
+              {"Foto da Equipe Esfinge"}
             </figcaption>
           </figure>
           <figure style={FIGURE_STYLE}>
@@ -304,7 +310,6 @@ function Atualidades() {
               {"Foto de Luiz Otávio!"}
             </figcaption>
           </figure>
-
           <figure
             style={{ ...FIGURE_STYLE, cursor: "pointer", maxWidth: "320px" }}
             onClick={() => setVideoSrc(SorteioCanecaIFHT)}
@@ -329,7 +334,14 @@ function Atualidades() {
           </figure>
         </div>
 
-        <hr style={{ padding: 0, marginTop: 0, marginBottom: 0 }} />
+        <hr
+          style={{
+            borderTop: "2px solid black",
+            padding: 0,
+            marginTop: 9,
+            marginBottom: 2,
+          }}
+        />
 
         <h3 tabIndex={0}>FBXDV - Copa Brasil 2025</h3>
         <h5 tabIndex={0}>
@@ -422,7 +434,14 @@ function Atualidades() {
           </figure>
         </div>
 
-        <hr style={{ padding: 0, marginTop: 0, marginBottom: 0 }} />
+        <hr
+          style={{
+            borderTop: "2px solid black",
+            padding: 0,
+            marginTop: 9,
+            marginBottom: 2,
+          }}
+        />
 
         <h3>4º Festival de Xadrez do Sider Shopping</h3>
         <h4>
