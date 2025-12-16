@@ -105,10 +105,10 @@ function XDesafios() {
           zIndex: 999,
         }}
       >
-        <h3 tabIndex={0}>'Desafio do Dia' e Links Úteis</h3>
-        <h5 tabIndex={0}>(em construção ... 03.11.2025, 11:01)</h5>
-        <h4 tabIndex={0} aria-label="Abaixo 'Desafio do Dia' e Links Úteis">
-          'Desafio do Dia' e Links Úteis:
+        <h3 tabIndex={0}>Links Úteis e 'Desafio do Dia'</h3>
+        <h5 tabIndex={0}>(em construção ... 11.12.2025, 19:29)</h5>
+        <h4 tabIndex={0} aria-label="Links Úteis e 'Desafio do Dia'">
+          Links Úteis e 'Desafio do Dia':
         </h4>
       </div>
 

@@ -1,5 +1,5 @@
 // Atualidades.tsx ***
-// 2025/12/10, 21:22 ***
+// 2025/12/16, 02:38 ***
 import { useState, useRef, useEffect } from "react";
 import Navbar from "../../components/Navbar";
 
@@ -13,7 +13,7 @@ import LeandroQueiros from "../../assets/LeandroQueiros.jpg";
 import AntonioFrancisco from "../../assets/AntonioFrancisco.jpg";
 import Euzebio from "../../assets/Euzebio.jpg";
 
-import I_XadrezOlhoFuturo from "../../assets/XadrezOlhoFuturo/FolderPetropolis251129.jpg";
+import I_TorneioXadrezOlhoFuturo from "../../assets/XadrezOlhoFuturo/FolderPetropolis251129.jpg";
 //import I_XadrezOlhoFuturo from "images/FolderPetropolis251129.jpg";
 
 import FotoEscada from "../../assets/XadrezOlhoFuturo/FotoEscada_2025_11_29.jpeg";
@@ -177,7 +177,7 @@ function Atualidades() {
         }}
       >
         <h3 tabIndex={0}>Atualidades</h3>
-        <h5 tabIndex={0}>(em construção ... 10/12/2025, 21:22)</h5>
+        <h5 tabIndex={0}>(em construção ... 16/12/2025, 02:38)</h5>
       </div>
 
       <div
@@ -229,14 +229,14 @@ function Atualidades() {
             <Zoom>
               <img
                 tabIndex={0}
-                src={I_XadrezOlhoFuturo}
+                src={I_TorneioXadrezOlhoFuturo}
                 className="video-class"
                 alt="I Torneio 'Xadrez de Olho no Futuro'"
                 title="I Torneio 'Xadrez de Olho no Futuro'"
               />
             </Zoom>
             <figcaption style={FIGCAPTION_STYLE}>
-              {"Projet Esphinge 2025\nUERJ/Petrópolis"}
+              {"Projet Esfinge 2025\nUERJ/Petrópolis"}
             </figcaption>
           </figure>
           <figure style={FIGURE_STYLE}>

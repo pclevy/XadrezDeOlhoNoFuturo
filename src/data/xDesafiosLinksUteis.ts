@@ -20,7 +20,7 @@ export const eventos: Evento[] = [
   {
     id: 1,
     nome: "Federação Brasileira de Xadrez para Deficientes Visuais",
-    imagem: "images/LogoFBXDV.png",
+    imagem: "images/Logo_FBXDV.png",
     descricaoCurta:
       "Link para o 'site' da FBXDV (Federação Brasileira de Xadrez para Deficientes Visuais",
     title:
@@ -67,5 +67,17 @@ export const eventos: Evento[] = [
 
     link: "https://www.fide.org",
     sigla: "FIDE",
+  },
+  {
+    id: 6,
+    nome: "IFHT/UERJ - Instituto Multidisciplinar de Formação Humana com Tecnologias",
+    imagem: "images/logoIFHT.png",
+    descricaoCurta:
+      "IFHT/UERJ - Instituto Multidisciplinar de Formação Humana com Tecnologias",
+    title:
+      "IFHT/UERJ - Instituto Multidisciplinar de Formação Humana com Tecnologias",
+
+    link: "https://www.ifht.uerj.br",
+    sigla: "IFHT/UERJ",
   },
 ];
