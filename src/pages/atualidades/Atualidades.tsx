@@ -18,10 +18,25 @@ import I_TorneioXadrezOlhoFuturo from "../../assets/XadrezOlhoFuturo/FolderPetro
 
 import FotoEscada from "../../assets/XadrezOlhoFuturo/FotoEscada_2025_11_29.jpeg";
 import Campeao_VitorMartins_2025_11_29 from "../../assets/XadrezOlhoFuturo/Campeao_VitorMartins_2025_11_29.jpeg";
-import CampeaFem_SophiaDomingos_2025_11_29 from "../../assets/XadrezOlhoFuturo/CampeaFem_2025_11_29.jpeg";
+import CampeaFem_SophiaDomingos_2025_11_29 from "../../assets/XadrezOlhoFuturo/CampeaFem_SophiaDomingos_2025_11_29.jpeg";
 import Equipe_2025_11_29 from "../../assets/XadrezOlhoFuturo/Equipe_2025_11_29.jpeg";
+
 import LuizOtavio_2025_11_29 from "../../assets/XadrezOlhoFuturo/LuizOtavio_2025_11_29.jpeg";
-import SorteioCanecaIFHT from "../../assets/XadrezOlhoFuturo/SorteioCanecaIFHT_2025-11-29.mp4";
+import ArielyDias_2025_11_29 from "../../assets/XadrezOlhoFuturo/ArielyDias_2025_11_29.jpeg";
+import BenjaminVieira_2025_11_29 from "../../assets/XadrezOlhoFuturo/BenjaminVieira_2025_11_29.jpeg";
+import HelenaPeruzo_2025_11_29 from "../../assets/XadrezOlhoFuturo/HelenaPeruzo_2025_11_29.jpeg";
+import LauraPeruzo_2025_11_29 from "../../assets/XadrezOlhoFuturo/LauraPeruzo_2025_11_29.jpeg";
+import InacioIglesias_2025_11_29 from "../../assets/XadrezOlhoFuturo/InacioIglesias_2025_11_29.jpeg";
+import JoaoCoelho_2025_11_29 from "../../assets/XadrezOlhoFuturo/JoaoCoelho_2025_11_29.jpeg";
+import JoaoSantana_2025_11_29 from "../../assets/XadrezOlhoFuturo/JoaoSantana_2025_11_29.jpeg";
+import LuisFreitas_2025_11_29 from "../../assets/XadrezOlhoFuturo/LuisFreitas_2025_11_29.jpeg";
+import MatheusBarreto_2025_11_29 from "../../assets/XadrezOlhoFuturo/MatheusBarreto_2025_11_29.jpeg";
+import MiguelAsaph_2025_11_29 from "../../assets/XadrezOlhoFuturo/MiguelAsaph_2025_11_29.jpeg";
+import MiguelStupen_2025_11_29 from "../../assets/XadrezOlhoFuturo/MiguelStupen_2025_11_29.jpeg";
+import SofiaScolarick_2025_11_29 from "../../assets/XadrezOlhoFuturo/SofiaScolarick_2025_11_29.jpeg";
+import TiagoSantos_2025_11_29 from "../../assets/XadrezOlhoFuturo/TiagoSantos_2025_11_29.jpeg";
+
+import SorteioCanecaIFHT from "../../assets/XadrezOlhoFuturo/SorteioCanecaIFHT_2025_11_29.mp4";
 
 import CopaBrasil2025_2 from "../../assets/FBXDV/CopaBrasilSudeste2025_2.jpg";
 import CopaBrasil2025_Enzo from "../../assets/FBXDV/Enzo_250817.jpg";
@@ -268,6 +283,7 @@ function Atualidades() {
               {"Campeão: Vitor Martins"}
             </figcaption>
           </figure>
+
           <figure style={FIGURE_STYLE}>
             <Zoom>
               <img
@@ -282,6 +298,7 @@ function Atualidades() {
               {"Campeã Feminina:\nSophia Domingos"}
             </figcaption>
           </figure>
+
           <figure style={FIGURE_STYLE}>
             <Zoom>
               <img
@@ -296,6 +313,7 @@ function Atualidades() {
               {"Foto da Equipe Esfinge"}
             </figcaption>
           </figure>
+
           <figure style={FIGURE_STYLE}>
             <Zoom>
               <img
@@ -310,6 +328,202 @@ function Atualidades() {
               {"Foto de Luiz Otávio!"}
             </figcaption>
           </figure>
+
+          <figure style={FIGURE_STYLE}>
+            <Zoom>
+              <img
+                tabIndex={0}
+                src={HelenaPeruzo_2025_11_29}
+                className="video-class"
+                alt="Foto de Helena Peruzo, 29/11/2025, DAU/Esdi/UERJ"
+                title="Foto de Helena Peruzo, 29/11/2025, DAU/Esdi/UERJ"
+              />
+            </Zoom>
+            <figcaption style={FIGCAPTION_STYLE}>
+              {"Foto de Helena Peruzo!"}
+            </figcaption>
+          </figure>
+
+          <figure style={FIGURE_STYLE}>
+            <Zoom>
+              <img
+                tabIndex={0}
+                src={LauraPeruzo_2025_11_29}
+                className="video-class"
+                alt="Foto de Laura Peruzo, 29/11/2025, DAU/Esdi/UERJ"
+                title="Foto de Laura Peruzo, 29/11/2025, DAU/Esdi/UERJ"
+              />
+            </Zoom>
+            <figcaption style={FIGCAPTION_STYLE}>
+              {"Foto de Laura Peruzo!"}
+            </figcaption>
+          </figure>
+
+          <figure style={FIGURE_STYLE}>
+            <Zoom>
+              <img
+                tabIndex={0}
+                src={InacioIglesias_2025_11_29}
+                className="video-class"
+                alt="Foto de Inacio Iglesias, 29/11/2025, DAU/Esdi/UERJ"
+                title="Foto de Inacio Iglesias, 29/11/2025, DAU/Esdi/UERJ"
+              />
+            </Zoom>
+            <figcaption style={FIGCAPTION_STYLE}>
+              {"Foto de Inacio Iglesias!"}
+            </figcaption>
+          </figure>
+
+          <figure style={FIGURE_STYLE}>
+            <Zoom>
+              <img
+                tabIndex={0}
+                src={JoaoCoelho_2025_11_29}
+                className="video-class"
+                alt="Foto de João Coelho, 29/11/2025, DAU/Esdi/UERJ"
+                title="Foto de João Coelho, 29/11/2025, DAU/Esdi/UERJ"
+              />
+            </Zoom>
+            <figcaption style={FIGCAPTION_STYLE}>
+              {"Foto de João Coelho!"}
+            </figcaption>
+          </figure>
+
+          <figure style={FIGURE_STYLE}>
+            <Zoom>
+              <img
+                tabIndex={0}
+                src={JoaoSantana_2025_11_29}
+                className="video-class"
+                alt="Foto de João Santana, 29/11/2025, DAU/Esdi/UERJ"
+                title="Foto de João Santana, 29/11/2025, DAU/Esdi/UERJ"
+              />
+            </Zoom>
+            <figcaption style={FIGCAPTION_STYLE}>
+              {"Foto de João Santana!"}
+            </figcaption>
+          </figure>
+
+          <figure style={FIGURE_STYLE}>
+            <Zoom>
+              <img
+                tabIndex={0}
+                src={LuisFreitas_2025_11_29}
+                className="video-class"
+                alt="Foto de Luis Freitas, 29/11/2025, DAU/Esdi/UERJ"
+                title="Foto de Luis Freitas, 29/11/2025, DAU/Esdi/UERJ"
+              />
+            </Zoom>
+            <figcaption style={FIGCAPTION_STYLE}>
+              {"Foto de Luis Freitas!"}
+            </figcaption>
+          </figure>
+
+          <figure style={FIGURE_STYLE}>
+            <Zoom>
+              <img
+                tabIndex={0}
+                src={MatheusBarreto_2025_11_29}
+                className="video-class"
+                alt="Foto de Matheus Barreto, 29/11/2025, DAU/Esdi/UERJ"
+                title="Foto de Matheus Barreto, 29/11/2025, DAU/Esdi/UERJ"
+              />
+            </Zoom>
+            <figcaption style={FIGCAPTION_STYLE}>
+              {"Foto de Matheus Barreto!"}
+            </figcaption>
+          </figure>
+
+          <figure style={FIGURE_STYLE}>
+            <Zoom>
+              <img
+                tabIndex={0}
+                src={MiguelAsaph_2025_11_29}
+                className="video-class"
+                alt="Foto de Miguel Asaph, 29/11/2025, DAU/Esdi/UERJ"
+                title="Foto de Miguel Asaph, 29/11/2025, DAU/Esdi/UERJ"
+              />
+            </Zoom>
+            <figcaption style={FIGCAPTION_STYLE}>
+              {"Foto de Miguel Asaph!"}
+            </figcaption>
+          </figure>
+
+          <figure style={FIGURE_STYLE}>
+            <Zoom>
+              <img
+                tabIndex={0}
+                src={MiguelStupen_2025_11_29}
+                className="video-class"
+                alt="Foto de Miguel Stupen, 29/11/2025, DAU/Esdi/UERJ"
+                title="Foto de Miguel Stupen, 29/11/2025, DAU/Esdi/UERJ"
+              />
+            </Zoom>
+            <figcaption style={FIGCAPTION_STYLE}>
+              {"Foto de Miguel Stupen!"}
+            </figcaption>
+          </figure>
+
+          <figure style={FIGURE_STYLE}>
+            <Zoom>
+              <img
+                tabIndex={0}
+                src={SofiaScolarick_2025_11_29}
+                className="video-class"
+                alt="Foto de Sofia Scolarick, 29/11/2025, DAU/Esdi/UERJ"
+                title="Foto de Sofia Scolarick, 29/11/2025, DAU/Esdi/UERJ"
+              />
+            </Zoom>
+            <figcaption style={FIGCAPTION_STYLE}>
+              {"Foto de Sofia Scolarick!"}
+            </figcaption>
+          </figure>
+
+          <figure style={FIGURE_STYLE}>
+            <Zoom>
+              <img
+                tabIndex={0}
+                src={ArielyDias_2025_11_29}
+                className="video-class"
+                alt="Foto de Ariely Dias, 29/11/2025, DAU/Esdi/UERJ"
+                title="Foto de Ariely Dias, 29/11/2025, DAU/Esdi/UERJ"
+              />
+            </Zoom>
+            <figcaption style={FIGCAPTION_STYLE}>
+              {"Foto de Ariely Dias!"}
+            </figcaption>
+          </figure>
+
+          <figure style={FIGURE_STYLE}>
+            <Zoom>
+              <img
+                tabIndex={0}
+                src={BenjaminVieira_2025_11_29}
+                className="video-class"
+                alt="Foto de Benjamin Vieira, 29/11/2025, DAU/Esdi/UERJ"
+                title="Foto de Benjamin Vieira, 29/11/2025, DAU/Esdi/UERJ"
+              />
+            </Zoom>
+            <figcaption style={FIGCAPTION_STYLE}>
+              {"Foto de Benjamin Vieira!"}
+            </figcaption>
+          </figure>
+
+          <figure style={FIGURE_STYLE}>
+            <Zoom>
+              <img
+                tabIndex={0}
+                src={TiagoSantos_2025_11_29}
+                className="video-class"
+                alt="Foto de Tiago Santos, 29/11/2025, DAU/Esdi/UERJ"
+                title="Foto de Tiago Santos, 29/11/2025, DAU/Esdi/UERJ"
+              />
+            </Zoom>
+            <figcaption style={FIGCAPTION_STYLE}>
+              {"Foto de Tiago Santos!"}
+            </figcaption>
+          </figure>
+
           <figure
             style={{ ...FIGURE_STYLE, cursor: "pointer", maxWidth: "320px" }}
             onClick={() => setVideoSrc(SorteioCanecaIFHT)}
