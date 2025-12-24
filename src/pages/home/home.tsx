@@ -1,5 +1,5 @@
 // home.tsx
-// Alterado em: 04/12/2025, 16:05
+// Alterado em: 24/12/2025, 03:11
 
 import xadrezOlho from "../../assets/xadrezOlho.svg";
 import cavaloPretoEsqLogo from "../../assets/cavalo-preto-EsqLogo.png";
@@ -13,8 +13,11 @@ import Esfinge from "../../assets/esfinge.png";
 import ImagemZoomHP from "../eventosHistoricos/ImageZoomHP";
 
 import FundoArte from "../../assets/chesgame.jpg";
-import dezembroLaranja from "../../assets/EuApoioDezembroLaranja.jpg";
-//import dezembroLaranja from "../../assets/EuApoioDezembroLaranja.png";
+
+//import fogosBoasFestas from "../../assets/EuApoiofogosBoasFestas.jpg";
+import fogosBoasFestas from "../../assets/fogo-de-artificio-imagem-animada-0065.gif";
+
+//import fogosBoasFestas from "../../assets/EuApoiofogosBoasFestas.png";
 
 import "./home.css";
 
@@ -30,11 +33,11 @@ function Home() {
 
   const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 768);
 
-  // Modal do Dezembro Laranja — APENAS ESTA PARTE É NOVA
+  // Modal do fogosBoasFestas — APENAS ESTA PARTE É NOVA
   const [showModalDez, setShowModalDez] = useState(false);
   const [fadeDez, setFadeDez] = useState(false);
 
-  const modalDezembroLaranja = showModalDez && (
+  const modalfogosBoasFestas = showModalDez && (
     <div
       onClick={() => {
         setFadeDez(false);
@@ -59,8 +62,9 @@ function Home() {
       }}
     >
       <img
-        src={dezembroLaranja}
-        alt="Zoom dezembro laranja"
+        //src={fogosBoasFestas}fogosBoasFestas
+        src={fogosBoasFestas}
+        alt="Zoom Fogos de Boas Festas"
         style={{
           position: "absolute",
           top: "1px",
@@ -164,7 +168,7 @@ function Home() {
     <div style={{ marginTop: 0, padding: "0px 5px", justifyItems: "center" }}>
       <Navbar onHeightChange={setNavbarHeight} onWidthChange={setNavbarWidth} />
 
-      {modalDezembroLaranja}
+      {modalfogosBoasFestas}
 
       <div
         ref={titRef}
@@ -187,7 +191,7 @@ function Home() {
       >
         <h3>Nossos Símbolos, nossa História</h3>
         <h5>
-          (Construindo o Futuro ... Xadrez de Olho no Futuro: 04/12/2025, 16:05)
+          (Construindo o Futuro ... Xadrez de Olho no Futuro: 24/12/2025, 03:11)
         </h5>
       </div>
 
@@ -229,11 +233,11 @@ function Home() {
             <span>
               {/* AQUI A ÚNICA ALTERAÇÃO: adição do onClick */}
               <img
-                src={dezembroLaranja}
+                src={fogosBoasFestas}
                 className="logo-campanhaMensal"
                 tabIndex={0}
-                alt="Ícone dezembroLaranja"
-                title="Dezembro Laranja' - Campanha contra o Câncer de Pele!"
+                alt="Ícone fogosBoasFestas"
+                title="Fogos de Boas Festas' - Comemorando Natal e Ano!"
                 style={{
                   width: "auto",
                   backgroundColor: "transparent",
@@ -247,7 +251,7 @@ function Home() {
 
               <div className="tooltip at_side" style={{ height: "auto" }}>
                 <div className="tooltip-content">
-                  "Dezembro Laranja" - Campanha contra o Câncer de Pele!
+                  "Fogos de Boas Festas" - Comemorando Natal e Ano!
                 </div>
               </div>
             </span>
