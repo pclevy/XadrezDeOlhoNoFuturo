@@ -1,5 +1,5 @@
 // home.tsx
-// Alterado em: 24/12/2025, 03:11
+// Alterado em: 24/12/2025, 18:30
 
 import xadrezOlho from "../../assets/xadrezOlho.svg";
 import cavaloPretoEsqLogo from "../../assets/cavalo-preto-EsqLogo.png";
@@ -37,6 +37,8 @@ function Home() {
   const [showModalDez, setShowModalDez] = useState(false);
   const [fadeDez, setFadeDez] = useState(false);
 
+  const AUTO_CLOSE_MS = 5000; // ⏱️ 5 segundos
+
   const modalfogosBoasFestas = showModalDez && (
     <div
       onClick={() => {
@@ -62,7 +64,6 @@ function Home() {
       }}
     >
       <img
-        //src={fogosBoasFestas}fogosBoasFestas
         src={fogosBoasFestas}
         alt="Zoom Fogos de Boas Festas"
         style={{
@@ -164,6 +165,61 @@ function Home() {
     }
   }, []);
 
+  //
+  //-----------------------------
+
+  // === MENSAGEM TEMPORÁRIA NO AZUL (ANUAL) ===
+  const [showMsgPeriodo, setShowMsgPeriodo] = useState(false);
+  const [fadeMsg, setFadeMsg] = useState(false);
+
+  useEffect(() => {
+    const agora = new Date();
+    const anoAtual = agora.getFullYear();
+
+    // Datas seguras (sem string / sem timezone bug)
+    const dataInicio = new Date(anoAtual, 11, 20, 0, 0, 0); // 20/dez
+    const dataFim = new Date(anoAtual + 1, 0, 5, 23, 59, 59); // 05/jan
+
+    if (agora >= dataInicio && agora <= dataFim) {
+      setShowMsgPeriodo(true);
+
+      // fade-in
+      setTimeout(() => setFadeMsg(true), 50);
+
+      // ⏱️ auto-fechar
+      const timer = setTimeout(() => {
+        fecharMsgPeriodo();
+      }, AUTO_CLOSE_MS);
+
+      return () => clearTimeout(timer);
+    }
+  }, []); //-----------------------------
+  //
+
+  const fecharAutomatico = () => {
+    setFadeMsg(false);
+    setTimeout(() => {
+      setShowMsgPeriodo(false);
+    }, 300);
+  };
+
+  setTimeout(() => {
+    fecharAutomatico();
+  }, AUTO_CLOSE_MS);
+
+  const fecharMsgPeriodo = () => {
+    setFadeMsg(false);
+    setTimeout(() => {
+      setShowMsgPeriodo(false);
+    }, 300);
+  };
+  //
+  //-----------------------------
+  // === CONTROLE DE DATA PARA MENSAGEM ===
+
+  //---------------------------------
+  //
+
   return (
     <div style={{ marginTop: 0, padding: "0px 5px", justifyItems: "center" }}>
       <Navbar onHeightChange={setNavbarHeight} onWidthChange={setNavbarWidth} />
@@ -191,7 +247,7 @@ function Home() {
       >
         <h3>Nossos Símbolos, nossa História</h3>
         <h5>
-          (Construindo o Futuro ... Xadrez de Olho no Futuro: 24/12/2025, 03:11)
+          (Construindo o Futuro ... Xadrez de Olho no Futuro: 24/12/2025, 18:30)
         </h5>
       </div>
 
@@ -257,6 +313,82 @@ function Home() {
             </span>
           </span>
         </div>
+
+        {showMsgPeriodo && (
+          <div
+            role="alert"
+            aria-live="polite"
+            aria-atomic="true"
+            style={{
+              // 🔥 comportamento correto
+              position: isSmallScreen ? "fixed" : "absolute",
+
+              // 📱 Mobile
+              bottom: isSmallScreen ? "14px" : "8px",
+              left: isSmallScreen ? "50%" : "auto",
+
+              // 🖥️ Desktop
+              right: isSmallScreen ? "auto" : "8px",
+              top: "auto",
+
+              transform: isSmallScreen
+                ? `translateX(-50%) ${fadeMsg ? "" : " translateY(14px)"}`
+                : fadeMsg
+                  ? "translateY(0)"
+                  : "translateY(10px)",
+
+              width: isSmallScreen ? "92%" : "260px",
+
+              zIndex: 9999,
+              backgroundColor: "#fff3cd",
+              color: "#664d03",
+              border: "1px solid #ffecb5",
+              padding: "12px",
+              borderRadius: "8px",
+              fontSize: "0.95rem",
+              boxShadow: "0 4px 10px rgba(0,0,0,0.3)",
+
+              // ✨ animação
+              opacity: fadeMsg ? 1 : 0,
+              transition: "opacity 0.3s ease, transform 0.3s ease",
+            }}
+            tabIndex={-1}
+          >
+            {" "}
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "flex-start",
+              }}
+            >
+              <strong id="msg-festas-titulo">🎉 Emanuel Lasker!</strong>
+
+              <button
+                onClick={fecharMsgPeriodo}
+                aria-label="Fechar mensagem de Aniversário"
+                style={{
+                  border: "none",
+                  background: "transparent",
+                  fontSize: "18px",
+                  cursor: "pointer",
+                  marginLeft: "8px",
+                  color: "#664d03",
+                }}
+              >
+                ✖
+              </button>
+            </div>
+            <div
+              style={{ marginTop: "8px" }}
+              aria-describedby="msg-festas-titulo"
+            >
+              Hoje seria Aniversário:
+              <br />
+              <b>24 de dezembro</b>.
+            </div>
+          </div>
+        )}
 
         <div>
           <img
