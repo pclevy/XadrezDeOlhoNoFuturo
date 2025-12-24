@@ -237,7 +237,7 @@ function Home() {
                 className="logo-campanhaMensal"
                 tabIndex={0}
                 alt="Ícone fogosBoasFestas"
-                title="Fogos de Boas Festas' - Comemorando Natal e Ano!"
+                title="Fogos de Boas Festas' - Comemorando Natal e Ano Novo!"
                 style={{
                   width: "auto",
                   backgroundColor: "transparent",
@@ -251,7 +251,7 @@ function Home() {
 
               <div className="tooltip at_side" style={{ height: "auto" }}>
                 <div className="tooltip-content">
-                  "Fogos de Boas Festas" - Comemorando Natal e Ano!
+                  "Fogos de Boas Festas" - Comemorando Natal e Ano Novo!
                 </div>
               </div>
             </span>
