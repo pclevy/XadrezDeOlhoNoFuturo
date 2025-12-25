@@ -1,5 +1,5 @@
 // home.tsx
-// Alterado em: 25/12/2025, 13:02
+// Alterado em: 25/12/2025, 16:22
 
 import xadrezOlho from "../../assets/xadrezOlho.svg";
 import cavaloPretoEsqLogo from "../../assets/cavalo-preto-EsqLogo.png";
@@ -178,7 +178,7 @@ function Home() {
 
     // Datas seguras (sem string / sem timezone bug)
     const dataInicio = new Date(anoAtual, 11, 24, 0, 0, 0); // 24/dez
-    const dataFim = new Date(anoAtual + 0, 11, 25, 23, 59, 59); // 25/dez,  +1=2025
+    const dataFim = new Date(anoAtual + 0, 11, 25, 17, 59, 59); // 25/dez,  +1=2025
 
     if (agora >= dataInicio && agora <= dataFim) {
       setShowMsgPeriodo(true);
