@@ -1,5 +1,5 @@
 // home.tsx
-// Alterado em: 25/12/2025, 13:02
+// Alterado em: 24/12/2025, 18:30
 
 import xadrezOlho from "../../assets/xadrezOlho.svg";
 import cavaloPretoEsqLogo from "../../assets/cavalo-preto-EsqLogo.png";
@@ -177,8 +177,8 @@ function Home() {
     const anoAtual = agora.getFullYear();
 
     // Datas seguras (sem string / sem timezone bug)
-    const dataInicio = new Date(anoAtual, 11, 24, 0, 0, 0); // 24/dez
-    const dataFim = new Date(anoAtual + 0, 11, 25, 23, 59, 59); // 25/dez,  +1=2025
+    const dataInicio = new Date(anoAtual, 11, 20, 0, 0, 0); // 20/dez
+    const dataFim = new Date(anoAtual + 1, 0, 5, 23, 59, 59); // 05/jan
 
     if (agora >= dataInicio && agora <= dataFim) {
       setShowMsgPeriodo(true);
@@ -247,7 +247,7 @@ function Home() {
       >
         <h3>Nossos Símbolos, nossa História</h3>
         <h5>
-          (Construindo o Futuro ... Xadrez de Olho no Futuro: 25/12/2025, 13:02)
+          (Construindo o Futuro ... Xadrez de Olho no Futuro: 24/12/2025, 18:30)
         </h5>
       </div>
 
