@@ -1,3 +1,6 @@
+// 25/12/2025
+// 22:37
+
 import { useState, useRef, useEffect } from "react";
 import Navbar from "../../components/Navbar";
 
@@ -139,7 +142,7 @@ function Reliquias() {
         }}
       >
         <h3>Documentos Históricos do XadrezUERJ</h3>
-        <h5>(em construção ... 23/10/2025, 21:56)</h5>
+        <h5>(Construindo o Futuro ... 25/12/2025, 22:36)</h5>
       </div>
 
       {/* Azul logo abaixo do Tit */}

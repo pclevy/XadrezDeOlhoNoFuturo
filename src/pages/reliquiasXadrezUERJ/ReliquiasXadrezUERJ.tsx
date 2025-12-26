@@ -1,5 +1,5 @@
 //ReliquiasXadrezUERJ.tsx
-//2025/10/24 21:51
+//2025/12/25 22:38
 
 import { useState, useRef, useEffect } from "react";
 import Navbar from "../../components/Navbar";
@@ -106,7 +106,7 @@ function ReliquiasXadrezUERJ() {
         }}
       >
         <h3 tabIndex={0}>Eventos UERJ</h3>
-        <h5 tabIndex={0}>(em construção ... 24/10/2025, 21:51)</h5>
+        <h5 tabIndex={0}>(Construindo o Futuro ... 25/12/2025, 22:38)</h5>
         <h4
           tabIndex={0}
           aria-label="Abaixo lista de Eventos, sendo que cada Evento ao receber foco, apresenta ao lado direito o cartaz correspondente"

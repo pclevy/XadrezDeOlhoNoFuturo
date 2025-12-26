@@ -1,5 +1,5 @@
 // Atualidades.tsx ***
-// 2025/12/16, 02:38 ***
+// 2025/12/25, 22:33 ***
 import { useState, useRef, useEffect } from "react";
 import Navbar from "../../components/Navbar";
 
@@ -192,7 +192,7 @@ function Atualidades() {
         }}
       >
         <h3 tabIndex={0}>Atualidades</h3>
-        <h5 tabIndex={0}>(em construção ... 16/12/2025, 02:38)</h5>
+        <h5 tabIndex={0}>(Construindo o Futuro ... 25/12/2025, 22:33)</h5>
       </div>
 
       <div

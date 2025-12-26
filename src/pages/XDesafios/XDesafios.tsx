@@ -1,5 +1,5 @@
 //XDesafios.tsx
-//2025/11/03 12:15
+//2025/12/25 22:39
 
 import { useState, useRef, useEffect } from "react";
 import Navbar from "../../components/Navbar";
@@ -106,7 +106,7 @@ function XDesafios() {
         }}
       >
         <h3 tabIndex={0}>Links Úteis e 'Desafio do Dia'</h3>
-        <h5 tabIndex={0}>(em construção ... 11.12.2025, 19:29)</h5>
+        <h5 tabIndex={0}>(Construindo o Futuro ... 25/12/2025, 22:39)</h5>
         <h4 tabIndex={0} aria-label="Links Úteis e 'Desafio do Dia'">
           Links Úteis e 'Desafio do Dia':
         </h4>
@@ -331,6 +331,7 @@ function XDesafios() {
             </Zoom>
           </div>
         </div>
+
         {/* Rodapé fixo */}
         <div
           style={{
