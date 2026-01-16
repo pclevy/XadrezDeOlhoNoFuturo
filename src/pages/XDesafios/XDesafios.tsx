@@ -1,5 +1,5 @@
-//XDesafios.tsx
-//2025/12/25 22:39
+// XDesafios.tsx
+// Alterado em 2025/12/25 22:39
 
 import { useState, useRef, useEffect } from "react";
 import Navbar from "../../components/Navbar";

@@ -1,5 +1,5 @@
-//ReliquiasXadrezUERJ.tsx
-//2025/12/25 22:38
+// ReliquiasXadrezUERJ.tsx
+// Alterado em 2025/12/25 22:38
 
 import { useState, useRef, useEffect } from "react";
 import Navbar from "../../components/Navbar";

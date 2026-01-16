@@ -1,3 +1,5 @@
+// eventosHistoricos.ts
+// alterado em 25/12/2025 22:47
 export interface Evento {
   id: number;
   nome: string;

@@ -1,5 +1,5 @@
 // home.tsx
-// Alterado em: 25/12/2025, 16:22
+// Alterado em: 15/01/2026, 21:39
 
 import xadrezOlho from "../../assets/xadrezOlho.svg";
 import cavaloPretoEsqLogo from "../../assets/cavalo-preto-EsqLogo.png";
@@ -15,7 +15,8 @@ import ImagemZoomHP from "../eventosHistoricos/ImageZoomHP";
 import FundoArte from "../../assets/chesgame.jpg";
 
 //import fogosBoasFestas from "../../assets/EuApoiofogosBoasFestas.jpg";
-import fogosBoasFestas from "../../assets/fogo-de-artificio-imagem-animada-0065.gif";
+//import fogosBoasFestas from "../../assets/fogo-de-artificio-imagem-animada-0065.gif";
+import janeiroBranco from "../../assets/janeiroBranco.jpg";
 
 //import fogosBoasFestas from "../../assets/EuApoiofogosBoasFestas.png";
 
@@ -64,8 +65,10 @@ function Home() {
       }}
     >
       <img
-        src={fogosBoasFestas}
-        alt="Zoom Fogos de Boas Festas"
+        //src={fogosBoasFestas}
+        //alt="Zoom Fogos de Boas Festas"
+        src={janeiroBranco}
+        alt="Zoom Janeiro Branco"
         style={{
           position: "absolute",
           top: "1px",
@@ -247,7 +250,7 @@ function Home() {
       >
         <h3>Nossos Símbolos, nossa História</h3>
         <h5>
-          (Construindo o Futuro ... Xadrez de Olho no Futuro: 25/12/2025, 13:02)
+          (Construindo o Futuro ... Xadrez de Olho no Futuro: 15/01/2026, 21:39)
         </h5>
       </div>
 
@@ -289,11 +292,14 @@ function Home() {
             <span>
               {/* AQUI A ÚNICA ALTERAÇÃO: adição do onClick */}
               <img
-                src={fogosBoasFestas}
+                //src={fogosBoasFestas}
+                //alt="Ícone fogosBoasFestas"
+                //title="Fogos de Boas Festas' - Comemorando Natal e Ano Novo!"
+                src={janeiroBranco}
                 className="logo-campanhaMensal"
                 tabIndex={0}
-                alt="Ícone fogosBoasFestas"
-                title="Fogos de Boas Festas' - Comemorando Natal e Ano Novo!"
+                alt="Ícone Janeiro Branco"
+                title="'Janeiro Branco' - Campanha pela Paz!"
                 style={{
                   width: "auto",
                   backgroundColor: "transparent",
@@ -307,7 +313,7 @@ function Home() {
 
               <div className="tooltip at_side" style={{ height: "auto" }}>
                 <div className="tooltip-content">
-                  "Fogos de Boas Festas" - Comemorando Natal e Ano Novo!
+                  "Janeiro Branco" - Campanha pela Paz!
                 </div>
               </div>
             </span>

@@ -1,4 +1,4 @@
-//xDesafiosLinksUteis.ts
+// xDesafiosLinksUteis.ts
 // alterado em 2025/11/03, 16:33
 
 export interface Evento {

@@ -1,5 +1,5 @@
-// 25/12/2025
-// 22:37
+// Reliquias
+// 25/12/2025 22:37
 
 import { useState, useRef, useEffect } from "react";
 import Navbar from "../../components/Navbar";
